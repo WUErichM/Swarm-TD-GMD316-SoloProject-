@@ -316,6 +316,7 @@
 "Assets/MainMenu.cs"
 "Assets/PauseMenu.cs"
 "Assets/Projectile.cs"
+"Assets/RangeIndicator.cs"
 "Assets/SaveData.cs"
 "Assets/SaveSystem.cs"
 "Assets/Tower.cs"

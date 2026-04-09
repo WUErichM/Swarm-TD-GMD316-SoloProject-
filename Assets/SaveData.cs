@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 [Serializable]
@@ -6,6 +6,8 @@ public class SaveData
 {
     public int hp;
     public int money;
+
+    public int score; // ✅ NEW
 
     public float lastTowerCost;
     public int towersBuilt;

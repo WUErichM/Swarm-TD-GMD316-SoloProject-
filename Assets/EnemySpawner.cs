@@ -23,8 +23,11 @@ public class EnemySpawner : MonoBehaviour
         gameTime += Time.deltaTime;
         timer += Time.deltaTime;
 
-        float difficultyFactor = 1f + gameTime / 30f;
-        float spawnRate = Mathf.Max(0.2f, baseSpawnRate / difficultyFactor);
+        // ✅ Slightly stronger mid-game scaling (controlled)
+        float difficultyFactor = 1f + (gameTime / 28f) + Mathf.Pow(gameTime / 80f, 1.15f);
+
+        // Keep spawn mostly similar (minor mid-game pressure)
+        float spawnRate = Mathf.Max(0.18f, baseSpawnRate / (1f + gameTime / 45f));
 
         if (timer >= spawnRate)
         {
@@ -42,12 +45,19 @@ public class EnemySpawner : MonoBehaviour
         {
             e.Setup(waypoints);
 
+            // ✅ Slightly stronger enemies in mid-game
             enemyHP = baseEnemyHP * difficultyFactor;
-            enemySpeed = baseEnemySpeed * difficultyFactor;
+            enemySpeed = baseEnemySpeed * (1f + difficultyFactor * 0.2f);
 
             e.health = Mathf.FloorToInt(enemyHP);
             e.speed = enemySpeed;
-            e.reward = Mathf.FloorToInt(baseEnemyReward * difficultyFactor);
+
+            // ✅ LOWER EARLY GAME MONEY
+            // Starts at ~60% instead of 80%
+            // Slowly drops to ~45% late game
+            float rewardScale = Mathf.Clamp(0.6f - (gameTime / 250f), 0.45f, 0.6f);
+
+            e.reward = Mathf.FloorToInt(baseEnemyReward * difficultyFactor * rewardScale);
         }
     }
 

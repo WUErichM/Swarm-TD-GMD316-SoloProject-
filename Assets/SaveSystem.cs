@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.IO;
 
 public class SaveSystem : MonoBehaviour
@@ -32,21 +32,21 @@ public class SaveSystem : MonoBehaviour
         {
             hp = gm.playerHP,
             money = gm.money,
-            lastTowerCost = bm.GetLastCost(), // SAVE current tower price
+            score = gm.score, // ✅ SAVE SCORE
+
+            lastTowerCost = bm.GetLastCost(),
             towersBuilt = bm.GetTowerCount(),
             gameTime = spawner.GetGameTime(),
             enemyHP = spawner.enemyHP,
             enemySpeed = spawner.enemySpeed
         };
 
-        // Save towers
         Tower[] towers = Object.FindObjectsOfType<Tower>();
         foreach (Tower t in towers)
         {
             data.towers.Add(new TowerData(t));
         }
 
-        // Save enemies
         Enemy[] enemies = Object.FindObjectsOfType<Enemy>();
         foreach (Enemy e in enemies)
         {

@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     public int playerHP = 10;
     public int money = 100;
 
+    public int score = 0; // ✅ NEW
+
     public int lastTowerCost = 25;
     public int towersBuilt = 0;
 
@@ -17,6 +19,9 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI hpText;
     public TextMeshProUGUI moneyText;
+
+    public TextMeshProUGUI scoreText; // ✅ NEW
+    public TextMeshProUGUI timeText;  // ✅ NEW
 
     public GameObject gameOverUI;
 
@@ -48,6 +53,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         gameTime += Time.deltaTime;
+        UpdateUI(); // ✅ keep UI live
     }
 
     public void LoseLife(int amount)
@@ -60,6 +66,9 @@ public class GameManager : MonoBehaviour
     public void AddMoney(int amount)
     {
         money += amount;
+
+        score += amount; // ✅ TRACK TOTAL EARNED
+
         UpdateUI();
     }
 
@@ -78,6 +87,19 @@ public class GameManager : MonoBehaviour
     {
         if (hpText != null) hpText.text = "HP: " + playerHP;
         if (moneyText != null) moneyText.text = "Money: " + money;
+
+        if (scoreText != null)
+            scoreText.text = "Score: " + score;
+
+        if (timeText != null)
+            timeText.text = "Time: " + FormatTime(gameTime);
+    }
+
+    string FormatTime(float t)
+    {
+        int minutes = Mathf.FloorToInt(t / 60f);
+        int seconds = Mathf.FloorToInt(t % 60f);
+        return minutes.ToString("00") + ":" + seconds.ToString("00");
     }
 
     void GameOver()
@@ -96,15 +118,21 @@ public class GameManager : MonoBehaviour
     {
         playerHP = loadedSaveData.hp;
         money = loadedSaveData.money;
-        lastTowerCost = Mathf.FloorToInt(loadedSaveData.lastTowerCost); // CAST float → int
+        score = loadedSaveData.score; // ✅ LOAD SCORE
+
+        lastTowerCost = Mathf.FloorToInt(loadedSaveData.lastTowerCost);
         towersBuilt = loadedSaveData.towersBuilt;
         gameTime = loadedSaveData.gameTime;
 
         UpdateUI();
 
-        // LOAD tower count and price
-        BuildManager.instance.LoadData(Mathf.FloorToInt(loadedSaveData.lastTowerCost), loadedSaveData.towersBuilt);
+        // Restore build system values
+        BuildManager.instance.LoadData(
+            Mathf.FloorToInt(loadedSaveData.lastTowerCost),
+            loadedSaveData.towersBuilt
+        );
 
+        // Restore spawner state
         EnemySpawner spawner = FindObjectOfType<EnemySpawner>();
         if (spawner != null)
         {
@@ -113,15 +141,23 @@ public class GameManager : MonoBehaviour
             spawner.enemySpeed = loadedSaveData.enemySpeed;
         }
 
-        // Clear current towers and enemies
+        // Clear existing objects
         foreach (Tower t in FindObjectsOfType<Tower>()) Destroy(t.gameObject);
         foreach (Enemy e in FindObjectsOfType<Enemy>()) Destroy(e.gameObject);
 
-        // Restore towers
+        // Restore towers WITH TYPE (your original logic kept)
         foreach (TowerData td in loadedSaveData.towers)
         {
             Vector3 pos = new Vector3(td.x, td.y, td.z);
-            GameObject tower = Instantiate(BuildManager.instance.towerPrefab, pos, Quaternion.identity);
+
+            GameObject prefabToSpawn = BuildManager.instance.standardTowerPrefab;
+
+            if (td.towerType == (int)Tower.TowerType.Melee)
+                prefabToSpawn = BuildManager.instance.meleeTowerPrefab;
+            else if (td.towerType == (int)Tower.TowerType.Sniper)
+                prefabToSpawn = BuildManager.instance.sniperTowerPrefab;
+
+            GameObject tower = Instantiate(prefabToSpawn, pos, Quaternion.identity);
             Tower towerComp = tower.GetComponent<Tower>();
             towerComp.LoadFromData(td);
         }
@@ -129,7 +165,12 @@ public class GameManager : MonoBehaviour
         // Restore enemies
         foreach (EnemyData ed in loadedSaveData.enemies)
         {
-            GameObject enemyObj = Instantiate(spawner.enemyPrefab, new Vector3(ed.x, ed.y, ed.z), Quaternion.identity);
+            GameObject enemyObj = Instantiate(
+                spawner.enemyPrefab,
+                new Vector3(ed.x, ed.y, ed.z),
+                Quaternion.identity
+            );
+
             Enemy e = enemyObj.GetComponent<Enemy>();
             e.health = Mathf.FloorToInt(ed.health);
             e.speed = ed.speed;

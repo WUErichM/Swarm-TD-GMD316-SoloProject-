@@ -8,6 +8,7 @@ ScriptsOnlyBuild:
     - MainMenu
     - PauseMenu
     - Projectile
+    - RangeIndicator
     - SaveSystem
     - Tower
     Unity.Rider.Editor.dll:
@@ -75,14 +76,20 @@ ScriptsOnlyBuild:
     fullTypeName: PauseMenu
     methodName: Resume
   - assembly: Assembly-CSharp
+    fullTypeName: BuildManager
+    methodName: StartPlacingSniper
+  - assembly: Assembly-CSharp
     fullTypeName: GameManager
     methodName: Restart
   - assembly: Assembly-CSharp
     fullTypeName: BuildManager
-    methodName: StartPlacing
+    methodName: StartPlacingStandard
   - assembly: Assembly-CSharp
     fullTypeName: PauseMenu
     methodName: SaveAndQuit
+  - assembly: Assembly-CSharp
+    fullTypeName: BuildManager
+    methodName: StartPlacingMelee
   - assembly: Assembly-CSharp
     fullTypeName: PauseMenu
     methodName: ResetRun
@@ -143,16 +150,20 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6018}
     - Class: 114
-      Script: {instanceID: 6192}
+      Script: {instanceID: 6112}
     - Class: 114
-      Script: {instanceID: 6360}
+      Script: {instanceID: 6194}
     - Class: 114
-      Script: {instanceID: 6368}
+      Script: {instanceID: 6362}
     - Class: 114
-      Script: {instanceID: 6794}
+      Script: {instanceID: 6370}
     - Class: 114
-      Script: {instanceID: 7034}
+      Script: {instanceID: 6796}
+    - Class: 114
+      Script: {instanceID: 7036}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 120
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
@@ -218,7 +229,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6018}
     - Class: 114
-      Script: {instanceID: 6360}
+      Script: {instanceID: 6362}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -340,7 +351,7 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: f2787724e21fb71765e318a50f7d861d
+      Hash: 91b297478a21b4d6ea7e406f63a76879
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Tower
@@ -814,6 +825,12 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
+      Hash: 6a811013ec107f1fdb5786a02618f0a0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RangeIndicator
+  - hash:
+      serializedVersion: 2
       Hash: d5561d2c948be43e99866e46836a64a3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -892,7 +909,7 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 806165cf8d42fa107c1dfec856e9a96e
+      Hash: dd096037fafacbbdca5067c4674cbbe9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -934,7 +951,7 @@ ScriptsOnlyBuild:
     className: AudioPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: 57e483f22312f768d379f26f5dbee8d2
+      Hash: 877751cfeb7403e5acbc46c00b28d39b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BuildManager

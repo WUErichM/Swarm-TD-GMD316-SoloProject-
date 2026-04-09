@@ -1,409 +1,409 @@
 { "cat":"", "pid":12345, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"bee_backend" } }
-,{ "pid":12345, "tid":0, "ts":1774819699270843, "dur":977, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1774819699271827, "dur":122, "ph":"X", "name": "Tundra",  "args": { "detail":"RemoveStaleOutputs" }}
-,{ "pid":12345, "tid":0, "ts":1774819699271962, "dur":15, "ph":"X", "name": "Tundra",  "args": { "detail":"PrepareNodes" }}
-,{ "pid":12345, "tid":0, "ts":1774819699271977, "dur":675, "ph":"X", "name": "Tundra",  "args": { "detail":"BuildQueueInit" }}
-,{ "pid":12345, "tid":0, "ts":1774819699272687, "dur":581, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1774819699273268, "dur":1, "ph":"X", "name": "SortWorkingStack",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1774819699461257, "dur":197, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1774819699461454, "dur":22, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1774819699461476, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1774819699461478, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1774819699461483, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1774819699461485, "dur":6, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1774819699461491, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1774819699461492, "dur":6, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1774819699461498, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1774819699461500, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1774819699461504, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1774819699461505, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1774819699461510, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1774819699461511, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1774819699461515, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1774819699461516, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1774819699461521, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1774819699461522, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1774819699461526, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1774819699461528, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1774819699461533, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1774819699461534, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1774819699461539, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1774819699461540, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1774819699461544, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1774819699461546, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1774819699461551, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1774819699461552, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1774819699461556, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1774819699461557, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1774819699461562, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1774819699461563, "dur":6, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1774819699461569, "dur":0, "ph":"X", "name": "SharedResourceDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1774819699461581, "dur":2, "ph":"X", "name": "BuildQueueDestroyTail",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1774819699461603, "dur":1445, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
-,{ "pid":12345, "tid":1, "ts":1774819699272382, "dur":892, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1774819699273278, "dur":4364, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1774819699277651, "dur":0, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"WriteText Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info" }}
-,{ "pid":12345, "tid":1, "ts":1774819699277655, "dur":84, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1774819699277742, "dur":1, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/app.info" }}
-,{ "pid":12345, "tid":1, "ts":1774819699277744, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1774819699277806, "dur":159, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":1, "ts":1774819699277966, "dur":110, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1774819699278076, "dur":151, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Resources/unity default resources" }}
-,{ "pid":12345, "tid":1, "ts":1774819699278228, "dur":86, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1774819699278315, "dur":45, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.UIModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1774819699278361, "dur":41, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1774819699278403, "dur":46, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1774819699278449, "dur":213, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1774819699278663, "dur":38, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1774819699278701, "dur":144, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1774819699278845, "dur":78, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.AIModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1774819699278923, "dur":36, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1774819699278960, "dur":68477, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/Unity.Services.Core.Internal.dll" }}
-,{ "pid":12345, "tid":1, "ts":1774819699347437, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1774819699347489, "dur":113783, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1774819699272401, "dur":882, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1774819699273283, "dur":4363, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1774819699277660, "dur":342, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
-,{ "pid":12345, "tid":2, "ts":1774819699278002, "dur":149, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1774819699278152, "dur":93, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1774819699278245, "dur":92, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1774819699278338, "dur":103, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.UIElementsModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1774819699278441, "dur":89, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1774819699278530, "dur":83, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1774819699278613, "dur":40, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1774819699278654, "dur":38, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.GIModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1774819699278692, "dur":173, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1774819699278866, "dur":85375, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/Unity.Timeline.dll" }}
-,{ "pid":12345, "tid":2, "ts":1774819699364242, "dur":74, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1774819699364319, "dur":96949, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1774819699272427, "dur":862, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1774819699273289, "dur":4358, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1774819699277650, "dur":199, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":3, "ts":1774819699277849, "dur":130, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1774819699277980, "dur":228, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/MonoBleedingEdge/etc/mono/browscap.ini" }}
-,{ "pid":12345, "tid":3, "ts":1774819699278208, "dur":89, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1774819699278298, "dur":98, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1774819699278396, "dur":89, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1774819699278485, "dur":43, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1774819699278528, "dur":44, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1774819699278573, "dur":132, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1774819699278705, "dur":40, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1774819699278746, "dur":109, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.ARModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1774819699278856, "dur":47, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1774819699278904, "dur":67918, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/Unity.Services.Core.Telemetry.dll" }}
-,{ "pid":12345, "tid":3, "ts":1774819699346822, "dur":74, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1774819699346898, "dur":114368, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1774819699272465, "dur":830, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1774819699273295, "dur":4350, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1774819699277651, "dur":341, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
-,{ "pid":12345, "tid":4, "ts":1774819699277992, "dur":117, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1774819699278110, "dur":103, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.VRModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1774819699278213, "dur":93, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1774819699278307, "dur":130, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.UNETModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1774819699278438, "dur":45, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1774819699278483, "dur":90, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1774819699278574, "dur":102, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1774819699278677, "dur":76, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.DirectorModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1774819699278753, "dur":100, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1774819699278853, "dur":67869, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/Unity.VisualScripting.State.dll" }}
-,{ "pid":12345, "tid":4, "ts":1774819699346724, "dur":93, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1774819699346821, "dur":114454, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1774819699272506, "dur":794, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1774819699273300, "dur":4343, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1774819699277650, "dur":335, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":5, "ts":1774819699277985, "dur":171, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1774819699278157, "dur":136, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.VFXModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1774819699278293, "dur":53, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1774819699278346, "dur":37, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.TLSModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1774819699278383, "dur":40, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1774819699278424, "dur":100, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1774819699278524, "dur":74, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1774819699278598, "dur":36, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.IMGUIModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1774819699278635, "dur":80, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1774819699278716, "dur":38, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1774819699278754, "dur":112, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1774819699278867, "dur":182275, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/Unity.TextMeshPro.dll" }}
-,{ "pid":12345, "tid":5, "ts":1774819699461143, "dur":71, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1774819699461217, "dur":1, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"Player" }}
-,{ "pid":12345, "tid":5, "ts":1774819699461219, "dur":0, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1774819699272541, "dur":766, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1774819699273307, "dur":4337, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1774819699277651, "dur":147, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/MonoBleedingEdge/etc/mono/4.5/web.config" }}
-,{ "pid":12345, "tid":6, "ts":1774819699277798, "dur":154, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1774819699277953, "dur":96, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/MonoBleedingEdge/etc/mono/config" }}
-,{ "pid":12345, "tid":6, "ts":1774819699278049, "dur":46, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1774819699278096, "dur":84, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.WindModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1774819699278181, "dur":62, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1774819699278243, "dur":86, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1774819699278329, "dur":103, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1774819699278433, "dur":41, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.StreamingModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1774819699278474, "dur":38, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1774819699278512, "dur":36, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1774819699278548, "dur":37, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1774819699278586, "dur":34, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1774819699278620, "dur":230, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1774819699278851, "dur":85, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1774819699278936, "dur":43, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1774819699278979, "dur":38260, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/Unity.Services.Core.Environments.dll" }}
-,{ "pid":12345, "tid":6, "ts":1774819699317241, "dur":148, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1774819699317392, "dur":143861, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1774819699272593, "dur":718, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1774819699273312, "dur":4353, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1774819699277667, "dur":303, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
-,{ "pid":12345, "tid":7, "ts":1774819699277970, "dur":85, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1774819699278056, "dur":103, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/UnityPlayer.dll" }}
-,{ "pid":12345, "tid":7, "ts":1774819699278160, "dur":48, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1774819699278209, "dur":50, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1774819699278260, "dur":89, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1774819699278350, "dur":40, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.TilemapModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1774819699278391, "dur":37, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1774819699278429, "dur":169, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.SubstanceModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1774819699278598, "dur":46, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1774819699278645, "dur":118, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.GridModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1774819699278763, "dur":97, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1774819699278860, "dur":88507, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/Unity.VisualScripting.Core.dll" }}
-,{ "pid":12345, "tid":7, "ts":1774819699367368, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1774819699367434, "dur":93943, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1774819699272617, "dur":700, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1774819699273317, "dur":4326, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1774819699277651, "dur":135, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
-,{ "pid":12345, "tid":8, "ts":1774819699277786, "dur":206, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1774819699277993, "dur":110, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
-,{ "pid":12345, "tid":8, "ts":1774819699278103, "dur":111, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1774819699278216, "dur":98, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1774819699278314, "dur":52, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1774819699278366, "dur":89, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1774819699278455, "dur":44, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1774819699278499, "dur":95, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.Physics2DModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1774819699278594, "dur":101, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1774819699278696, "dur":44, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.CoreModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1774819699278741, "dur":136, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1774819699278877, "dur":1582, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/Unity.Services.Core.Threading.dll" }}
-,{ "pid":12345, "tid":8, "ts":1774819699280459, "dur":55, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1774819699280515, "dur":43779, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/Unity.Services.Core.Configuration.dll" }}
-,{ "pid":12345, "tid":8, "ts":1774819699324294, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1774819699324356, "dur":136905, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1774819699272638, "dur":684, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1774819699273322, "dur":4334, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1774819699277660, "dur":340, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
-,{ "pid":12345, "tid":9, "ts":1774819699278000, "dur":151, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1774819699278152, "dur":68, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.VideoModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1774819699278220, "dur":73, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1774819699278294, "dur":92, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1774819699278386, "dur":77, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1774819699278464, "dur":43, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1774819699278507, "dur":39, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1774819699278547, "dur":101, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.LocalizationModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1774819699278648, "dur":44, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1774819699278693, "dur":42, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1774819699278735, "dur":103, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1774819699278839, "dur":83, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1774819699278922, "dur":44, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1774819699278967, "dur":2036, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/Unity.Services.Core.Environments.Internal.dll" }}
-,{ "pid":12345, "tid":9, "ts":1774819699281003, "dur":60, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1774819699281064, "dur":59, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/System.Xml.dll" }}
-,{ "pid":12345, "tid":9, "ts":1774819699281123, "dur":125, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1774819699281249, "dur":55, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/System.ServiceModel.Internals.dll" }}
-,{ "pid":12345, "tid":9, "ts":1774819699281304, "dur":94, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1774819699281399, "dur":46, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/System.Runtime.Serialization.dll" }}
-,{ "pid":12345, "tid":9, "ts":1774819699281445, "dur":88, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1774819699281534, "dur":56, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/System.Net.Http.dll" }}
-,{ "pid":12345, "tid":9, "ts":1774819699281591, "dur":91, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1774819699281683, "dur":58, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/System.EnterpriseServices.dll" }}
-,{ "pid":12345, "tid":9, "ts":1774819699281741, "dur":124, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1774819699281866, "dur":120, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/System.Core.dll" }}
-,{ "pid":12345, "tid":9, "ts":1774819699281986, "dur":530, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1774819699282517, "dur":184, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/StreamingAssets/UnityServicesProjectConfiguration.json" }}
-,{ "pid":12345, "tid":9, "ts":1774819699282701, "dur":137, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1774819699282839, "dur":47, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/sharedassets1.assets" }}
-,{ "pid":12345, "tid":9, "ts":1774819699282892, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1774819699283889, "dur":12085, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/sharedassets1.assets" }}
-,{ "pid":12345, "tid":9, "ts":1774819699296022, "dur":136, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/ScriptingAssemblies.json" }}
-,{ "pid":12345, "tid":9, "ts":1774819699296159, "dur":44, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1774819699296204, "dur":884, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/RuntimeInitializeOnLoads.json" }}
-,{ "pid":12345, "tid":9, "ts":1774819699297089, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1774819699297141, "dur":50, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/resources.assets.resS" }}
-,{ "pid":12345, "tid":9, "ts":1774819699297197, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1774819699297206, "dur":1114, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/resources.assets.resS" }}
-,{ "pid":12345, "tid":9, "ts":1774819699298362, "dur":38, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/resources.assets" }}
-,{ "pid":12345, "tid":9, "ts":1774819699298405, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1774819699298412, "dur":812, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/resources.assets" }}
-,{ "pid":12345, "tid":9, "ts":1774819699299263, "dur":122, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/level1.resS" }}
-,{ "pid":12345, "tid":9, "ts":1774819699299390, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1774819699299397, "dur":2057, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/level1.resS" }}
-,{ "pid":12345, "tid":9, "ts":1774819699301496, "dur":41, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/level1" }}
-,{ "pid":12345, "tid":9, "ts":1774819699301543, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1774819699301550, "dur":1065, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/level1" }}
-,{ "pid":12345, "tid":9, "ts":1774819699302658, "dur":40, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/level0.resS" }}
-,{ "pid":12345, "tid":9, "ts":1774819699302703, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1774819699302710, "dur":1209, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/level0.resS" }}
-,{ "pid":12345, "tid":9, "ts":1774819699303960, "dur":38, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/level0" }}
-,{ "pid":12345, "tid":9, "ts":1774819699304003, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1774819699304010, "dur":2254, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/level0" }}
-,{ "pid":12345, "tid":9, "ts":1774819699306350, "dur":46, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/globalgamemanagers.assets" }}
-,{ "pid":12345, "tid":9, "ts":1774819699306401, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1774819699306408, "dur":1692, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/globalgamemanagers.assets" }}
-,{ "pid":12345, "tid":9, "ts":1774819699308139, "dur":38, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/globalgamemanagers" }}
-,{ "pid":12345, "tid":9, "ts":1774819699308181, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1774819699308188, "dur":1548, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/globalgamemanagers" }}
-,{ "pid":12345, "tid":9, "ts":1774819699309772, "dur":151482, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1774819699272665, "dur":661, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1774819699273326, "dur":4335, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1774819699277662, "dur":276, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":10, "ts":1774819699277938, "dur":126, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1774819699278065, "dur":191, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/UnityCrashHandler64.exe" }}
-,{ "pid":12345, "tid":10, "ts":1774819699278256, "dur":102, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1774819699278358, "dur":46, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
-,{ "pid":12345, "tid":10, "ts":1774819699278404, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1774819699278456, "dur":99, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
-,{ "pid":12345, "tid":10, "ts":1774819699278555, "dur":49, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1774819699278605, "dur":85, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
-,{ "pid":12345, "tid":10, "ts":1774819699278690, "dur":83, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1774819699278774, "dur":94, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.AnimationModule.dll" }}
-,{ "pid":12345, "tid":10, "ts":1774819699278868, "dur":86, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1774819699278955, "dur":1903, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/Unity.Services.Core.Networking.dll" }}
-,{ "pid":12345, "tid":10, "ts":1774819699280858, "dur":59, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1774819699280918, "dur":50, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/System.Xml.Linq.dll" }}
-,{ "pid":12345, "tid":10, "ts":1774819699280968, "dur":123, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1774819699281091, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/System.Transactions.dll" }}
-,{ "pid":12345, "tid":10, "ts":1774819699281154, "dur":97, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1774819699281252, "dur":65, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/System.Security.dll" }}
-,{ "pid":12345, "tid":10, "ts":1774819699281318, "dur":95, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1774819699281414, "dur":52, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/System.Numerics.dll" }}
-,{ "pid":12345, "tid":10, "ts":1774819699281466, "dur":104, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1774819699281570, "dur":47, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/System.IO.Compression.FileSystem.dll" }}
-,{ "pid":12345, "tid":10, "ts":1774819699281617, "dur":80, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1774819699281698, "dur":43, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/System.Drawing.dll" }}
-,{ "pid":12345, "tid":10, "ts":1774819699281741, "dur":89, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1774819699281830, "dur":41, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/System.Data.dll" }}
-,{ "pid":12345, "tid":10, "ts":1774819699281871, "dur":78, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1774819699281949, "dur":55, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/System.Configuration.dll" }}
-,{ "pid":12345, "tid":10, "ts":1774819699282004, "dur":92, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1774819699282097, "dur":41, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/Newtonsoft.Json.dll" }}
-,{ "pid":12345, "tid":10, "ts":1774819699282138, "dur":54, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1774819699282192, "dur":48, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/netstandard.dll" }}
-,{ "pid":12345, "tid":10, "ts":1774819699282240, "dur":45, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1774819699282286, "dur":89, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/mscorlib.dll" }}
-,{ "pid":12345, "tid":10, "ts":1774819699282375, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1774819699282434, "dur":70556, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/Assembly-CSharp.dll" }}
-,{ "pid":12345, "tid":10, "ts":1774819699352992, "dur":85, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1774819699353080, "dur":108187, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1774819699272849, "dur":500, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1774819699273349, "dur":4305, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1774819699277655, "dur":261, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/MonoBleedingEdge/etc/mono/4.0/web.config" }}
-,{ "pid":12345, "tid":11, "ts":1774819699277916, "dur":136, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1774819699278053, "dur":115, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
-,{ "pid":12345, "tid":11, "ts":1774819699278168, "dur":109, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1774819699278278, "dur":102, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
-,{ "pid":12345, "tid":11, "ts":1774819699278381, "dur":128, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1774819699278510, "dur":45, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
-,{ "pid":12345, "tid":11, "ts":1774819699278555, "dur":99, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1774819699278655, "dur":38, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.GameCenterModule.dll" }}
-,{ "pid":12345, "tid":11, "ts":1774819699278693, "dur":47, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1774819699278740, "dur":111, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
-,{ "pid":12345, "tid":11, "ts":1774819699278851, "dur":170, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1774819699279022, "dur":1476, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/Unity.Services.Core.Device.dll" }}
-,{ "pid":12345, "tid":11, "ts":1774819699280498, "dur":57, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1774819699280556, "dur":988, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/Unity.Services.Core.Analytics.dll" }}
-,{ "pid":12345, "tid":11, "ts":1774819699281545, "dur":57, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1774819699281603, "dur":42, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/System.IO.Compression.dll" }}
-,{ "pid":12345, "tid":11, "ts":1774819699281645, "dur":113, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1774819699281759, "dur":42, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/System.dll" }}
-,{ "pid":12345, "tid":11, "ts":1774819699281801, "dur":42, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1774819699281844, "dur":36, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/System.Data.DataSetExtensions.dll" }}
-,{ "pid":12345, "tid":11, "ts":1774819699281880, "dur":70, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1774819699281951, "dur":67, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/System.ComponentModel.Composition.dll" }}
-,{ "pid":12345, "tid":11, "ts":1774819699282019, "dur":324, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1774819699282344, "dur":62, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/Mono.Security.dll" }}
-,{ "pid":12345, "tid":11, "ts":1774819699282407, "dur":150, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1774819699282558, "dur":107, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Resources/unity_builtin_extra" }}
-,{ "pid":12345, "tid":11, "ts":1774819699282715, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1774819699283916, "dur":3166, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Resources/unity_builtin_extra" }}
-,{ "pid":12345, "tid":11, "ts":1774819699287131, "dur":45, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/sharedassets0.assets.resS" }}
-,{ "pid":12345, "tid":11, "ts":1774819699287183, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1774819699287191, "dur":1734, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/sharedassets0.assets.resS" }}
-,{ "pid":12345, "tid":11, "ts":1774819699288973, "dur":45, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/sharedassets0.assets" }}
-,{ "pid":12345, "tid":11, "ts":1774819699289024, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1774819699289032, "dur":19161, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/sharedassets0.assets" }}
-,{ "pid":12345, "tid":11, "ts":1774819699308238, "dur":129, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/boot.config" }}
-,{ "pid":12345, "tid":11, "ts":1774819699308367, "dur":46, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1774819699308413, "dur":152842, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1774819699272878, "dur":476, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1774819699273354, "dur":4295, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1774819699277651, "dur":356, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":12, "ts":1774819699278007, "dur":207, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1774819699278215, "dur":60, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1774819699278276, "dur":136, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1774819699278413, "dur":217, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.TerrainModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1774819699278630, "dur":93, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1774819699278723, "dur":46, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.ClothModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1774819699278769, "dur":91, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1774819699278860, "dur":98433, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/Unity.VisualScripting.Flow.dll" }}
-,{ "pid":12345, "tid":12, "ts":1774819699377294, "dur":76, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1774819699377372, "dur":83901, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1774819699272755, "dur":581, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1774819699273336, "dur":4321, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1774819699277658, "dur":369, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
-,{ "pid":12345, "tid":13, "ts":1774819699278027, "dur":190, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1774819699278218, "dur":41, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
-,{ "pid":12345, "tid":13, "ts":1774819699278260, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1774819699278312, "dur":138, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.UmbraModule.dll" }}
-,{ "pid":12345, "tid":13, "ts":1774819699278450, "dur":40, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1774819699278490, "dur":45, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.ProfilerModule.dll" }}
-,{ "pid":12345, "tid":13, "ts":1774819699278535, "dur":92, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1774819699278628, "dur":48, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.HotReloadModule.dll" }}
-,{ "pid":12345, "tid":13, "ts":1774819699278676, "dur":37, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1774819699278714, "dur":144, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
-,{ "pid":12345, "tid":13, "ts":1774819699278858, "dur":47, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1774819699278905, "dur":44172, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/Unity.Services.Core.Scheduler.dll" }}
-,{ "pid":12345, "tid":13, "ts":1774819699323168, "dur":236, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1774819699323406, "dur":137854, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1774819699272791, "dur":547, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1774819699273338, "dur":4325, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1774819699277663, "dur":335, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/MonoBleedingEdge/etc/mono/2.0/web.config" }}
-,{ "pid":12345, "tid":14, "ts":1774819699277998, "dur":88, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1774819699278087, "dur":65, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.XRModule.dll" }}
-,{ "pid":12345, "tid":14, "ts":1774819699278153, "dur":56, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1774819699278210, "dur":56, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
-,{ "pid":12345, "tid":14, "ts":1774819699278266, "dur":106, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1774819699278372, "dur":40, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
-,{ "pid":12345, "tid":14, "ts":1774819699278412, "dur":83, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1774819699278496, "dur":40, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.PhysicsModule.dll" }}
-,{ "pid":12345, "tid":14, "ts":1774819699278536, "dur":38, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1774819699278574, "dur":41, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.InputModule.dll" }}
-,{ "pid":12345, "tid":14, "ts":1774819699278615, "dur":53, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1774819699278669, "dur":42, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.dll" }}
-,{ "pid":12345, "tid":14, "ts":1774819699278711, "dur":153, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1774819699278864, "dur":50, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
-,{ "pid":12345, "tid":14, "ts":1774819699278914, "dur":85, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1774819699279000, "dur":44204, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/Unity.Services.Core.dll" }}
-,{ "pid":12345, "tid":14, "ts":1774819699323204, "dur":81, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1774819699323288, "dur":137971, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1774819699272822, "dur":521, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1774819699273344, "dur":4354, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1774819699277698, "dur":218, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
-,{ "pid":12345, "tid":15, "ts":1774819699277916, "dur":156, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1774819699278073, "dur":45, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project.exe" }}
-,{ "pid":12345, "tid":15, "ts":1774819699278118, "dur":89, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1774819699278208, "dur":48, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
-,{ "pid":12345, "tid":15, "ts":1774819699278256, "dur":89, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1774819699278346, "dur":135482, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.UI.dll" }}
-,{ "pid":12345, "tid":15, "ts":1774819699413829, "dur":79, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1774819699413910, "dur":47355, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1774819699272693, "dur":638, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1774819699273331, "dur":4329, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1774819699277660, "dur":391, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":16, "ts":1774819699278051, "dur":119, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1774819699278171, "dur":112, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.VehiclesModule.dll" }}
-,{ "pid":12345, "tid":16, "ts":1774819699278283, "dur":43, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1774819699278326, "dur":95, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
-,{ "pid":12345, "tid":16, "ts":1774819699278421, "dur":46, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1774819699278468, "dur":173, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
-,{ "pid":12345, "tid":16, "ts":1774819699278641, "dur":92, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1774819699278734, "dur":129, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.AudioModule.dll" }}
-,{ "pid":12345, "tid":16, "ts":1774819699278863, "dur":66, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1774819699278930, "dur":59370, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/Unity.Services.Core.Registration.dll" }}
-,{ "pid":12345, "tid":16, "ts":1774819699338301, "dur":82, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1774819699338386, "dur":122878, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1774819699464182, "dur":1039, "ph":"X", "name": "ProfilerWriteOutput" }
+,{ "pid":12345, "tid":0, "ts":1775749657712286, "dur":1008, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1775749657713304, "dur":126, "ph":"X", "name": "Tundra",  "args": { "detail":"RemoveStaleOutputs" }}
+,{ "pid":12345, "tid":0, "ts":1775749657713441, "dur":18, "ph":"X", "name": "Tundra",  "args": { "detail":"PrepareNodes" }}
+,{ "pid":12345, "tid":0, "ts":1775749657713459, "dur":447, "ph":"X", "name": "Tundra",  "args": { "detail":"BuildQueueInit" }}
+,{ "pid":12345, "tid":0, "ts":1775749657713928, "dur":502, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1775749657714430, "dur":1, "ph":"X", "name": "SortWorkingStack",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1775749657889125, "dur":233, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1775749657889358, "dur":10, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1775749657889368, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1775749657889370, "dur":8, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1775749657889378, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1775749657889380, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1775749657889385, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1775749657889386, "dur":7, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1775749657889393, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1775749657889394, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1775749657889399, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1775749657889400, "dur":7, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1775749657889407, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1775749657889408, "dur":6, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1775749657889414, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1775749657889416, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1775749657889421, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1775749657889422, "dur":6, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1775749657889428, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1775749657889430, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1775749657889435, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1775749657889436, "dur":6, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1775749657889442, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1775749657889443, "dur":16, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1775749657889459, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1775749657889460, "dur":7, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1775749657889467, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1775749657889468, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1775749657889473, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1775749657889474, "dur":6, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1775749657889481, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1775749657889482, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1775749657889487, "dur":0, "ph":"X", "name": "SharedResourceDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1775749657889500, "dur":1, "ph":"X", "name": "BuildQueueDestroyTail",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1775749657889520, "dur":1394, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
+,{ "pid":12345, "tid":1, "ts":1775749657713920, "dur":516, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1775749657714440, "dur":4021, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1775749657718474, "dur":0, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"WriteText Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info" }}
+,{ "pid":12345, "tid":1, "ts":1775749657718478, "dur":50, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1775749657718533, "dur":1, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/app.info" }}
+,{ "pid":12345, "tid":1, "ts":1775749657718534, "dur":128, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1775749657718662, "dur":142, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":1, "ts":1775749657718805, "dur":60, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1775749657718867, "dur":49, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1775749657718916, "dur":45, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1775749657718962, "dur":50, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1775749657719012, "dur":92, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1775749657719105, "dur":101, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1775749657719206, "dur":39, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1775749657719245, "dur":104, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1775749657719349, "dur":33, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1775749657719382, "dur":133, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1775749657719515, "dur":54, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1775749657719570, "dur":169440, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":1, "ts":1775749657889011, "dur":73, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1775749657889087, "dur":1, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"Player" }}
+,{ "pid":12345, "tid":1, "ts":1775749657889088, "dur":0, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1775749657713980, "dur":466, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1775749657714446, "dur":4021, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1775749657718473, "dur":238, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":2, "ts":1775749657718711, "dur":116, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1775749657718827, "dur":104, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1775749657718931, "dur":99, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1775749657719030, "dur":90, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1775749657719121, "dur":46, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1775749657719168, "dur":47, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1775749657719215, "dur":88, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1775749657719303, "dur":36, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1775749657719339, "dur":163, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1775749657719503, "dur":57910, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":2, "ts":1775749657777414, "dur":75, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1775749657777491, "dur":111676, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1775749657713945, "dur":495, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1775749657714440, "dur":4028, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1775749657718473, "dur":178, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":3, "ts":1775749657718651, "dur":43, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1775749657718695, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1775749657718757, "dur":54, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1775749657718811, "dur":53, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1775749657718864, "dur":47, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1775749657718911, "dur":44, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1775749657718955, "dur":49, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1775749657719004, "dur":52, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1775749657719056, "dur":98, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1775749657719154, "dur":54, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1775749657719208, "dur":53, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1775749657719262, "dur":46, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1775749657719308, "dur":94, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1775749657719403, "dur":114, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1775749657719517, "dur":59, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1775749657719577, "dur":1810, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/Unity.Services.Core.Threading.dll" }}
+,{ "pid":12345, "tid":3, "ts":1775749657721388, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1775749657721454, "dur":59, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":3, "ts":1775749657721514, "dur":46, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1775749657721560, "dur":48, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":3, "ts":1775749657721608, "dur":47, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1775749657721656, "dur":43, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":3, "ts":1775749657721699, "dur":41, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1775749657721741, "dur":42, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":3, "ts":1775749657721784, "dur":44, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1775749657721828, "dur":50, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":3, "ts":1775749657721878, "dur":52, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1775749657721930, "dur":48, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":3, "ts":1775749657721978, "dur":47, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1775749657722025, "dur":45, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":3, "ts":1775749657722070, "dur":43, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1775749657722114, "dur":40, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":3, "ts":1775749657722154, "dur":42, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1775749657722197, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":3, "ts":1775749657722258, "dur":54, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1775749657722312, "dur":65354, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":3, "ts":1775749657787666, "dur":45, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1775749657787712, "dur":101443, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1775749657714307, "dur":209, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1775749657714517, "dur":3960, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1775749657718481, "dur":107, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":4, "ts":1775749657718588, "dur":32, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1775749657718620, "dur":92, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":4, "ts":1775749657718712, "dur":32, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1775749657718744, "dur":122, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1775749657718866, "dur":47, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1775749657718914, "dur":35, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1775749657718950, "dur":32, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1775749657718983, "dur":142, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1775749657719125, "dur":98, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1775749657719224, "dur":99, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1775749657719323, "dur":49, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1775749657719373, "dur":150, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1775749657719524, "dur":63, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1775749657719588, "dur":40599, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/Unity.Services.Core.Scheduler.dll" }}
+,{ "pid":12345, "tid":4, "ts":1775749657760188, "dur":96, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1775749657760285, "dur":128905, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1775749657714001, "dur":452, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1775749657714453, "dur":4013, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1775749657718474, "dur":79, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":5, "ts":1775749657718553, "dur":125, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1775749657718679, "dur":45, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project.exe" }}
+,{ "pid":12345, "tid":5, "ts":1775749657718725, "dur":107, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1775749657718833, "dur":105, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1775749657718939, "dur":139, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1775749657719078, "dur":136, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1775749657719214, "dur":142, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1775749657719356, "dur":37, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1775749657719394, "dur":130, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1775749657719524, "dur":129, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
+,{ "pid":12345, "tid":5, "ts":1775749657719653, "dur":106, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1775749657719760, "dur":1532, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/Unity.Services.Core.Device.dll" }}
+,{ "pid":12345, "tid":5, "ts":1775749657721293, "dur":57, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1775749657721351, "dur":53, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":5, "ts":1775749657721405, "dur":80, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1775749657721486, "dur":54, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":5, "ts":1775749657721541, "dur":43, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1775749657721585, "dur":46, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":5, "ts":1775749657721631, "dur":44, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1775749657721676, "dur":208, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":5, "ts":1775749657721884, "dur":44, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1775749657721929, "dur":46, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":5, "ts":1775749657721976, "dur":218, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1775749657722195, "dur":52, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/Newtonsoft.Json.dll" }}
+,{ "pid":12345, "tid":5, "ts":1775749657722248, "dur":50, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1775749657722298, "dur":46, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":5, "ts":1775749657722344, "dur":44, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1775749657722389, "dur":181, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/StreamingAssets/UnityServicesProjectConfiguration.json" }}
+,{ "pid":12345, "tid":5, "ts":1775749657722571, "dur":57, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1775749657722629, "dur":42, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/sharedassets1.assets" }}
+,{ "pid":12345, "tid":5, "ts":1775749657722712, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1775749657723851, "dur":2542, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/sharedassets1.assets" }}
+,{ "pid":12345, "tid":5, "ts":1775749657726447, "dur":49, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":5, "ts":1775749657726502, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1775749657726509, "dur":1239, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":5, "ts":1775749657727962, "dur":56, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":5, "ts":1775749657728024, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1775749657728031, "dur":2679, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":5, "ts":1775749657730746, "dur":70, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/level1" }}
+,{ "pid":12345, "tid":5, "ts":1775749657730821, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1775749657730827, "dur":3411, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/level1" }}
+,{ "pid":12345, "tid":5, "ts":1775749657734274, "dur":36, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":5, "ts":1775749657734315, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1775749657734320, "dur":5538, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":5, "ts":1775749657739894, "dur":118, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/boot.config" }}
+,{ "pid":12345, "tid":5, "ts":1775749657740012, "dur":44, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1775749657740057, "dur":149066, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1775749657714025, "dur":433, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1775749657714458, "dur":4005, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1775749657718473, "dur":113, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":6, "ts":1775749657718587, "dur":185, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1775749657718773, "dur":47, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1775749657718820, "dur":47, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1775749657718868, "dur":116, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1775749657718984, "dur":176, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1775749657719160, "dur":103, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1775749657719264, "dur":110, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1775749657719374, "dur":126, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1775749657719501, "dur":80, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1775749657719582, "dur":67496, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/Unity.Services.Core.Telemetry.dll" }}
+,{ "pid":12345, "tid":6, "ts":1775749657787079, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1775749657787145, "dur":102017, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1775749657714050, "dur":414, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1775749657714464, "dur":4000, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1775749657718473, "dur":165, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":7, "ts":1775749657718638, "dur":37, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1775749657718676, "dur":140, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":7, "ts":1775749657718816, "dur":79, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1775749657718896, "dur":47, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1775749657718943, "dur":41, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1775749657718984, "dur":41, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1775749657719025, "dur":50, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1775749657719076, "dur":38, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1775749657719115, "dur":33, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1775749657719149, "dur":196, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1775749657719345, "dur":50, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1775749657719396, "dur":122, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1775749657719519, "dur":128, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1775749657719648, "dur":1584, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/Unity.Services.Core.Environments.Internal.dll" }}
+,{ "pid":12345, "tid":7, "ts":1775749657721233, "dur":53, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1775749657721286, "dur":1653, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/Unity.Services.Core.Analytics.dll" }}
+,{ "pid":12345, "tid":7, "ts":1775749657722940, "dur":56, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1775749657722996, "dur":65, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":7, "ts":1775749657723271, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1775749657723636, "dur":5797, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":7, "ts":1775749657729481, "dur":42, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/level1.resS" }}
+,{ "pid":12345, "tid":7, "ts":1775749657729528, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1775749657729535, "dur":3525, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/level1.resS" }}
+,{ "pid":12345, "tid":7, "ts":1775749657733097, "dur":41, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/level0" }}
+,{ "pid":12345, "tid":7, "ts":1775749657733180, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1775749657733186, "dur":11778, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/level0" }}
+,{ "pid":12345, "tid":7, "ts":1775749657745009, "dur":144116, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1775749657714075, "dur":394, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1775749657714469, "dur":3993, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1775749657718473, "dur":66, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":8, "ts":1775749657718539, "dur":201, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1775749657718741, "dur":110, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1775749657718851, "dur":236, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1775749657719087, "dur":38, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1775749657719126, "dur":35, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1775749657719161, "dur":34, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1775749657719195, "dur":75, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1775749657719271, "dur":43, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1775749657719314, "dur":47, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1775749657719362, "dur":47, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1775749657719409, "dur":119, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1775749657719529, "dur":78018, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":8, "ts":1775749657797549, "dur":77, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1775749657797629, "dur":91520, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1775749657714096, "dur":378, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1775749657714474, "dur":3995, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1775749657718477, "dur":88, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":9, "ts":1775749657718566, "dur":121, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1775749657718688, "dur":41, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":9, "ts":1775749657718730, "dur":34, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1775749657718764, "dur":128, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1775749657718892, "dur":100, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1775749657718993, "dur":41, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1775749657719034, "dur":147, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1775749657719182, "dur":49, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1775749657719231, "dur":80, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1775749657719312, "dur":196, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1775749657719509, "dur":156, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1775749657719666, "dur":1484, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/Unity.Services.Core.Environments.dll" }}
+,{ "pid":12345, "tid":9, "ts":1775749657721151, "dur":69, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1775749657721220, "dur":38967, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/Unity.Services.Core.Configuration.dll" }}
+,{ "pid":12345, "tid":9, "ts":1775749657760188, "dur":95, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1775749657760284, "dur":128900, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1775749657714121, "dur":358, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1775749657714479, "dur":3993, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1775749657718472, "dur":135, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":10, "ts":1775749657718607, "dur":39, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1775749657718647, "dur":110, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":10, "ts":1775749657718758, "dur":55, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1775749657718814, "dur":207, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1775749657719021, "dur":45, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1775749657719066, "dur":38, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1775749657719104, "dur":40, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1775749657719144, "dur":110, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1775749657719255, "dur":36, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1775749657719292, "dur":34, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":10, "ts":1775749657719326, "dur":185, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1775749657719512, "dur":85608, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":10, "ts":1775749657805121, "dur":49, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1775749657805171, "dur":83963, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1775749657714145, "dur":339, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1775749657714484, "dur":4001, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1775749657718486, "dur":72, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":11, "ts":1775749657718559, "dur":37, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1775749657718597, "dur":36, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":11, "ts":1775749657718633, "dur":33, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1775749657718667, "dur":146, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":11, "ts":1775749657718813, "dur":93, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1775749657718906, "dur":106, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.UNETModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1775749657719012, "dur":46, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1775749657719058, "dur":85, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1775749657719143, "dur":95, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1775749657719239, "dur":137, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1775749657719376, "dur":120, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1775749657719496, "dur":122, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1775749657719619, "dur":97, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1775749657719716, "dur":40492, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/Unity.Services.Core.dll" }}
+,{ "pid":12345, "tid":11, "ts":1775749657760208, "dur":70, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1775749657760281, "dur":128839, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1775749657714179, "dur":310, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1775749657714489, "dur":3982, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1775749657718474, "dur":136, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":12, "ts":1775749657718611, "dur":45, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1775749657718656, "dur":41, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":12, "ts":1775749657718697, "dur":34, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1775749657718732, "dur":38, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1775749657718770, "dur":104, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1775749657718874, "dur":227, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1775749657719102, "dur":94, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1775749657719196, "dur":45, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1775749657719241, "dur":148, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1775749657719390, "dur":126, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1775749657719516, "dur":92, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1775749657719608, "dur":1601, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/Unity.Services.Core.Networking.dll" }}
+,{ "pid":12345, "tid":12, "ts":1775749657721210, "dur":237, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1775749657721448, "dur":57, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":12, "ts":1775749657721506, "dur":50, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1775749657721556, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":12, "ts":1775749657721617, "dur":50, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1775749657721667, "dur":50, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":12, "ts":1775749657721718, "dur":38, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1775749657721757, "dur":37, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":12, "ts":1775749657721794, "dur":39, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1775749657721834, "dur":138, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":12, "ts":1775749657721972, "dur":228, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1775749657722200, "dur":157, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":12, "ts":1775749657722358, "dur":69, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1775749657722428, "dur":75, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":12, "ts":1775749657723310, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1775749657723690, "dur":3148, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":12, "ts":1775749657726883, "dur":182, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":12, "ts":1775749657727065, "dur":52, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1775749657727118, "dur":1244, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":12, "ts":1775749657728363, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1775749657728425, "dur":49, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/resources.assets" }}
+,{ "pid":12345, "tid":12, "ts":1775749657728502, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1775749657728509, "dur":4192, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/resources.assets" }}
+,{ "pid":12345, "tid":12, "ts":1775749657732738, "dur":39, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/level0.resS" }}
+,{ "pid":12345, "tid":12, "ts":1775749657732782, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1775749657732787, "dur":1834, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/level0.resS" }}
+,{ "pid":12345, "tid":12, "ts":1775749657734658, "dur":38, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":12, "ts":1775749657734701, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1775749657734706, "dur":6182, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":12, "ts":1775749657740923, "dur":148199, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1775749657714213, "dur":281, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1775749657714494, "dur":3996, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1775749657718490, "dur":90, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":13, "ts":1775749657718580, "dur":189, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1775749657718770, "dur":54, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1775749657718824, "dur":98, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1775749657718923, "dur":46, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1775749657718969, "dur":90, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1775749657719060, "dur":51, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1775749657719112, "dur":88, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1775749657719200, "dur":88, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1775749657719288, "dur":33, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1775749657719321, "dur":172, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1775749657719493, "dur":138, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1775749657719632, "dur":64202, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/Unity.Services.Core.Internal.dll" }}
+,{ "pid":12345, "tid":13, "ts":1775749657783835, "dur":87, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1775749657783925, "dur":105248, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1775749657714234, "dur":265, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1775749657714499, "dur":3981, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1775749657718484, "dur":151, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":14, "ts":1775749657718635, "dur":245, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1775749657718881, "dur":38, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1775749657718919, "dur":36, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1775749657718955, "dur":127878, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":14, "ts":1775749657846833, "dur":77, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1775749657846912, "dur":42215, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1775749657714254, "dur":252, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1775749657714506, "dur":3967, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1775749657718473, "dur":257, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":15, "ts":1775749657718730, "dur":108, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1775749657718839, "dur":43, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1775749657718882, "dur":95, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1775749657718978, "dur":46, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1775749657719024, "dur":55, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1775749657719080, "dur":156, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1775749657719236, "dur":50, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1775749657719286, "dur":45, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1775749657719332, "dur":46, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1775749657719379, "dur":136, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1775749657719515, "dur":77, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1775749657719593, "dur":55669, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/Unity.Services.Core.Registration.dll" }}
+,{ "pid":12345, "tid":15, "ts":1775749657775263, "dur":107, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1775749657775373, "dur":113806, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1775749657714277, "dur":233, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1775749657714511, "dur":3963, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1775749657718474, "dur":144, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":16, "ts":1775749657718618, "dur":333, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1775749657718952, "dur":49, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1775749657719002, "dur":36, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1775749657719039, "dur":99, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1775749657719138, "dur":141, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1775749657719279, "dur":43, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1775749657719322, "dur":193, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1775749657719516, "dur":85431, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Airth/OneDrive/Desktop/GMD316 TD Project/Tower Defense GMD316 Project_Data/Tower Defense GMD316 Project_Data/Managed/Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":16, "ts":1775749657804948, "dur":74, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1775749657805025, "dur":84116, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1775749657891996, "dur":1200, "ph":"X", "name": "ProfilerWriteOutput" }
 ,

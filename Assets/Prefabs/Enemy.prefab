@@ -129,4 +129,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  health: 5
+  health: 6
+  reward: 8

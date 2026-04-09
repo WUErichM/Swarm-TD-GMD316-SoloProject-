@@ -1,30 +1,50 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public float baseSpeed = 10f; // starting speed
+    public float baseSpeed = 10f;
     public int damage = 2;
 
     private Enemy target;
+    private Tower sourceTower;
 
-    public void SetTarget(Enemy t)
+    public void SetTarget(Enemy t, Tower tower)
     {
         target = t;
+        sourceTower = tower;
 
-        // Increase speed based on enemy speed
         if (target != null)
         {
             baseSpeed = Mathf.Max(baseSpeed, target.speed * 2f);
-            // ensures projectile is fast enough to reach target
+        }
+
+        // ✅ Sniper projectiles are 3x faster
+        if (sourceTower != null && sourceTower.towerType == Tower.TowerType.Sniper)
+        {
+            baseSpeed *= 3f;
         }
     }
 
     void Update()
     {
+        // ✅ If target is gone, try to find a new one (sniper only)
         if (target == null)
         {
-            Destroy(gameObject);
-            return;
+            if (sourceTower != null && sourceTower.towerType == Tower.TowerType.Sniper)
+            {
+                target = FindFurthestEnemy();
+
+                if (target == null)
+                {
+                    Destroy(gameObject);
+                    return;
+                }
+            }
+            else
+            {
+                Destroy(gameObject);
+                return;
+            }
         }
 
         Vector3 dir = (target.transform.position - transform.position).normalized;
@@ -35,5 +55,27 @@ public class Projectile : MonoBehaviour
             target.TakeDamage(damage);
             Destroy(gameObject);
         }
+    }
+
+    // ✅ Find furthest enemy in scene
+    Enemy FindFurthestEnemy()
+    {
+        Enemy[] enemies = FindObjectsOfType<Enemy>();
+
+        Enemy furthest = null;
+        float maxDist = 0f;
+
+        foreach (Enemy e in enemies)
+        {
+            float dist = Vector3.Distance(transform.position, e.transform.position);
+
+            if (furthest == null || dist > maxDist)
+            {
+                maxDist = dist;
+                furthest = e;
+            }
+        }
+
+        return furthest;
     }
 }

@@ -7,7 +7,9 @@ public class TowerData
     public int damage;
     public float fireRate;
     public float range;
-    public int level; // save tower upgrade level
+    public int level;
+
+    public int towerType; // NEW
 
     public TowerData(Tower tower)
     {
@@ -18,5 +20,6 @@ public class TowerData
         fireRate = tower.fireRate;
         range = tower.range;
         level = tower.level;
+        towerType = (int)tower.towerType;
     }
 }
