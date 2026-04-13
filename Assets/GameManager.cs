@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public int playerHP = 10;
     public int money = 100;
 
-    public int score = 0; // ✅ NEW
+    public int score = 0;
 
     public int lastTowerCost = 25;
     public int towersBuilt = 0;
@@ -19,11 +19,13 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI hpText;
     public TextMeshProUGUI moneyText;
-
-    public TextMeshProUGUI scoreText; // ✅ NEW
-    public TextMeshProUGUI timeText;  // ✅ NEW
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI timeText;
 
     public GameObject gameOverUI;
+
+    // ✅ NEW: track game over state
+    public bool isGameOver = false;
 
     void Awake()
     {
@@ -52,23 +54,32 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        // ❌ STOP time tracking if game over
+        if (isGameOver) return;
+
         gameTime += Time.deltaTime;
-        UpdateUI(); // ✅ keep UI live
+        UpdateUI();
     }
 
     public void LoseLife(int amount)
     {
+        if (isGameOver) return;
+
         playerHP -= amount;
         UpdateUI();
-        if (playerHP <= 0) GameOver();
+
+        if (playerHP <= 0)
+        {
+            GameOver();
+        }
     }
 
     public void AddMoney(int amount)
     {
+        if (isGameOver) return;
+
         money += amount;
-
-        score += amount; // ✅ TRACK TOTAL EARNED
-
+        score += amount;
         UpdateUI();
     }
 
@@ -87,12 +98,8 @@ public class GameManager : MonoBehaviour
     {
         if (hpText != null) hpText.text = "HP: " + playerHP;
         if (moneyText != null) moneyText.text = "Money: " + money;
-
-        if (scoreText != null)
-            scoreText.text = "Score: " + score;
-
-        if (timeText != null)
-            timeText.text = "Time: " + FormatTime(gameTime);
+        if (scoreText != null) scoreText.text = "Score: " + score;
+        if (timeText != null) timeText.text = "Time: " + FormatTime(gameTime);
     }
 
     string FormatTime(float t)
@@ -104,21 +111,33 @@ public class GameManager : MonoBehaviour
 
     void GameOver()
     {
+        isGameOver = true; // ✅ LOCK GAME STATE
         Time.timeScale = 0f;
-        if (gameOverUI != null) gameOverUI.SetActive(true);
+
+        if (gameOverUI != null)
+            gameOverUI.SetActive(true);
     }
 
     public void Restart()
     {
         Time.timeScale = 1f;
+        isGameOver = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    // ✅ NEW: go to main menu
+    public void ReturnToMenu()
+    {
+        Time.timeScale = 1f;
+        isGameOver = false;
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void ApplyLoadedData()
     {
         playerHP = loadedSaveData.hp;
         money = loadedSaveData.money;
-        score = loadedSaveData.score; // ✅ LOAD SCORE
+        score = loadedSaveData.score;
 
         lastTowerCost = Mathf.FloorToInt(loadedSaveData.lastTowerCost);
         towersBuilt = loadedSaveData.towersBuilt;
@@ -126,13 +145,11 @@ public class GameManager : MonoBehaviour
 
         UpdateUI();
 
-        // Restore build system values
         BuildManager.instance.LoadData(
             Mathf.FloorToInt(loadedSaveData.lastTowerCost),
             loadedSaveData.towersBuilt
         );
 
-        // Restore spawner state
         EnemySpawner spawner = FindObjectOfType<EnemySpawner>();
         if (spawner != null)
         {
@@ -141,11 +158,9 @@ public class GameManager : MonoBehaviour
             spawner.enemySpeed = loadedSaveData.enemySpeed;
         }
 
-        // Clear existing objects
         foreach (Tower t in FindObjectsOfType<Tower>()) Destroy(t.gameObject);
         foreach (Enemy e in FindObjectsOfType<Enemy>()) Destroy(e.gameObject);
 
-        // Restore towers WITH TYPE (your original logic kept)
         foreach (TowerData td in loadedSaveData.towers)
         {
             Vector3 pos = new Vector3(td.x, td.y, td.z);
@@ -162,7 +177,6 @@ public class GameManager : MonoBehaviour
             towerComp.LoadFromData(td);
         }
 
-        // Restore enemies
         foreach (EnemyData ed in loadedSaveData.enemies)
         {
             GameObject enemyObj = Instantiate(

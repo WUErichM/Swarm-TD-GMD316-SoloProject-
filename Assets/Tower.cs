@@ -51,10 +51,6 @@ public class Tower : MonoBehaviour
                 damage += 4;
                 fireRate *= 1.5f;
                 break;
-
-            case TowerType.Standard:
-            default:
-                break;
         }
     }
 
@@ -64,9 +60,21 @@ public class Tower : MonoBehaviour
         fireRate *= Mathf.Max(0.7f, 1f - (towerIndex * 0.03f));
     }
 
+    // ✅ NEW LEVEL SYSTEM
+    public void SetInitialLevel(int newLevel)
+    {
+        level = newLevel;
+
+        damage += (level - 1);
+        fireRate *= Mathf.Pow(0.92f, level - 1);
+    }
+
     void OnMouseDown()
     {
-        Upgrade();
+        if (TowerUI.instance != null)
+        {
+            TowerUI.instance.Show(this);
+        }
     }
 
     Enemy FindTarget()
@@ -82,7 +90,6 @@ public class Tower : MonoBehaviour
 
             if (dist > range) continue;
 
-            // ✅ MELEE → closest enemy
             if (towerType == TowerType.Melee)
             {
                 if (bestTarget == null || dist < bestValue)
@@ -91,7 +98,6 @@ public class Tower : MonoBehaviour
                     bestTarget = e;
                 }
             }
-            // ✅ SNIPER → furthest enemy
             else if (towerType == TowerType.Sniper)
             {
                 if (bestTarget == null || dist > bestValue)
@@ -100,7 +106,6 @@ public class Tower : MonoBehaviour
                     bestTarget = e;
                 }
             }
-            // ✅ STANDARD → first found
             else
             {
                 return e;
@@ -116,8 +121,6 @@ public class Tower : MonoBehaviour
         Projectile p = proj.GetComponent<Projectile>();
 
         p.damage = damage;
-
-        // ✅ IMPORTANT: pass this tower into projectile
         p.SetTarget(target, this);
     }
 
@@ -138,7 +141,6 @@ public class Tower : MonoBehaviour
         range = td.range;
         level = td.level;
 
-        // ✅ Cast int → enum
         towerType = (TowerType)td.towerType;
 
         ApplyTowerTypeStats();

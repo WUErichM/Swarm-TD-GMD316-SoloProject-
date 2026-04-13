@@ -75,7 +75,6 @@ public class BuildManager : MonoBehaviour
 
             if (prefabTower != null)
             {
-                // ✅ SNIPER = NO RANGE INDICATOR
                 if (prefabTower.towerType == Tower.TowerType.Sniper)
                 {
                     if (rangeIndicator != null)
@@ -86,7 +85,6 @@ public class BuildManager : MonoBehaviour
                 }
                 else
                 {
-                    // ✅ CREATE IF NEEDED
                     if (rangeIndicator == null)
                     {
                         rangeIndicator = Instantiate(rangeIndicatorPrefab);
@@ -109,7 +107,6 @@ public class BuildManager : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
-        // ❌ prevent building on path
         if (Physics.Raycast(ray, out hit, 100f, pathMask)) return;
 
         if (Physics.Raycast(ray, out hit, 100f, groundMask))
@@ -128,12 +125,13 @@ public class BuildManager : MonoBehaviour
 
         GameObject tower = Instantiate(selectedTowerPrefab, position, Quaternion.identity);
 
-        // ✅ ENSURE REAL TOWER IS NOT IGNORE RAYCAST
         SetLayer(tower, LayerMask.NameToLayer("Default"));
 
         Tower t = tower.GetComponent<Tower>();
         if (t != null)
         {
+            // ✅ NEW: increasing level system
+            t.SetInitialLevel(towersBuilt + 1);
             t.ApplyScaling(towersBuilt);
         }
 
@@ -224,8 +222,6 @@ public class BuildManager : MonoBehaviour
         if (sniperCostText != null)
             sniperCostText.text = "Sniper ($" + cost + ")";
     }
-
-    // ✅ SAVE SYSTEM SUPPORT
 
     public int GetLastCost()
     {

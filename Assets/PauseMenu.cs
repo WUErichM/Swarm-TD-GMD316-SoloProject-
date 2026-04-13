@@ -13,6 +13,10 @@ public class PauseMenu : MonoBehaviour
 
     void Update()
     {
+        // ❌ BLOCK pause if game is over
+        if (GameManager.instance != null && GameManager.instance.isGameOver)
+            return;
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (Time.timeScale == 0f)
@@ -24,6 +28,9 @@ public class PauseMenu : MonoBehaviour
 
     public void Pause()
     {
+        if (GameManager.instance != null && GameManager.instance.isGameOver)
+            return;
+
         if (panel != null) panel.SetActive(true);
         Time.timeScale = 0f;
     }

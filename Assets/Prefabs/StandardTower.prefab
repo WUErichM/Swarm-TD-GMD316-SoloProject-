@@ -112,9 +112,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerType: 0
-  range: 8
-  fireRate: 0.9
-  damage: 2
+  range: 10
+  fireRate: 1
+  damage: 3
   projectilePrefab: {fileID: 6383868638376002951, guid: dc464420c0bafe342b9930ea0c820619, type: 3}
   firePoint: {fileID: 5640731212156309604}
   level: 1
