@@ -6,7 +6,6 @@ public class SaveData
 {
     public int hp;
     public int money;
-
     public int score;
 
     public float lastTowerCost;
@@ -30,6 +29,8 @@ public class EnemyData
     public int health;
     public float speed;
     public int reward;
+
+    public EnemyData() { }
 
     public EnemyData(Enemy e)
     {

@@ -3,7 +3,7 @@ using TMPro;
 using System.Collections.Generic;
 using System.Linq;
 
-public class MainMenuLeaderboardUI : MonoBehaviour
+public class LeaderBoardUI : MonoBehaviour
 {
     public TextMeshProUGUI leaderboardText;
 
@@ -18,33 +18,26 @@ public class MainMenuLeaderboardUI : MonoBehaviour
 
         if (data == null || data.leaderboard == null || data.leaderboard.Count == 0)
         {
-            if (leaderboardText != null)
-                leaderboardText.text = "No runs yet";
-
+            leaderboardText.text = "No runs yet";
             return;
         }
 
-        // Sort by highest score first
+        // Defensive sort (always correct order)
         List<RunData> sorted = data.leaderboard
             .OrderByDescending(r => r.score)
             .ThenByDescending(r => r.time)
+            .Take(5)
             .ToList();
 
-        // Take top 5 runs
-        int count = Mathf.Min(5, sorted.Count);
+        string output = "TOP 5 RUNS\n\n";
 
-        string output = "Last Runs (Top 5)\n\n";
-
-        for (int i = 0; i < count; i++)
+        for (int i = 0; i < sorted.Count; i++)
         {
             RunData run = sorted[i];
-
-            output +=
-                $"{i + 1}. Score: {run.score} | Time: {FormatTime(run.time)}\n";
+            output += $"{i + 1}. Score: {run.score} | Time: {FormatTime(run.time)}\n";
         }
 
-        if (leaderboardText != null)
-            leaderboardText.text = output;
+        leaderboardText.text = output;
     }
 
     string FormatTime(float t)

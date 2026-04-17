@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 public class GameManager : MonoBehaviour
 {
@@ -130,29 +131,26 @@ public class GameManager : MonoBehaviour
 
     void SaveRunToLeaderboard()
     {
-        SaveData data;
+        SaveData data = SaveSystem.LoadGame();
 
-        if (SaveSystem.SaveExists())
-        {
-            data = SaveSystem.LoadGame();
-        }
-        else
-        {
+        if (data == null)
             data = new SaveData();
-        }
 
         if (data.leaderboard == null)
             data.leaderboard = new List<RunData>();
 
-        data.leaderboard.Insert(0, new RunData(score, gameTime));
+        data.leaderboard.Add(new RunData(score, gameTime));
 
-        if (data.leaderboard.Count > 10)
-            data.leaderboard.RemoveAt(data.leaderboard.Count - 1);
+        data.leaderboard = data.leaderboard
+            .OrderByDescending(r => r.score)
+            .ThenByDescending(r => r.time)
+            .Take(10)
+            .ToList();
 
         string json = JsonUtility.ToJson(data, true);
         File.WriteAllText(Application.persistentDataPath + "/save.json", json);
 
-        Debug.Log("Leaderboard Updated. Total Runs: " + data.leaderboard.Count);
+        Debug.Log("Leaderboard Updated: " + data.leaderboard.Count + " runs saved");
     }
 
     public void Restart()
@@ -216,7 +214,7 @@ public class GameManager : MonoBehaviour
         foreach (EnemyData ed in loadedSaveData.enemies)
         {
             GameObject enemyObj = Instantiate(
-                spawner.enemyPrefab,
+                FindObjectOfType<EnemySpawner>().enemyPrefab,
                 new Vector3(ed.x, ed.y, ed.z),
                 Quaternion.identity
             );
@@ -225,7 +223,7 @@ public class GameManager : MonoBehaviour
             e.health = Mathf.FloorToInt(ed.health);
             e.speed = ed.speed;
             e.reward = ed.reward;
-            e.Setup(spawner.waypoints);
+            e.Setup(FindObjectOfType<EnemySpawner>().waypoints);
         }
 
         loadedSaveData = null;
