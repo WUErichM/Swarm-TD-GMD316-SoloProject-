@@ -7,25 +7,22 @@ public class SaveData
     public int hp;
     public int money;
 
-    public int score; // ✅ NEW
+    public int score;
 
     public float lastTowerCost;
     public int towersBuilt;
 
     public float gameTime;
 
-    // Enemy stats for saving spawner
     public float enemyHP;
     public float enemySpeed;
 
-    // Save towers
     public List<TowerData> towers = new List<TowerData>();
-
-    // Save enemies
     public List<EnemyData> enemies = new List<EnemyData>();
+
+    public List<RunData> leaderboard = new List<RunData>();
 }
 
-// Save individual enemy
 [Serializable]
 public class EnemyData
 {

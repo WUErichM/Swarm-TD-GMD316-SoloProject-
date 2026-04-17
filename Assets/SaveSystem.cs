@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.IO;
+using System.Collections.Generic;
 
 public class SaveSystem : MonoBehaviour
 {
@@ -24,52 +25,60 @@ public class SaveSystem : MonoBehaviour
 
         if (gm == null || spawner == null || bm == null)
         {
-            Debug.LogWarning("Save failed: Missing GameManager, EnemySpawner, or BuildManager in scene.");
+            Debug.LogWarning("Save failed: Missing components.");
             return;
         }
 
-        SaveData data = new SaveData
+        SaveData data;
+
+        if (File.Exists(Path))
         {
-            hp = gm.playerHP,
-            money = gm.money,
-            score = gm.score, // ✅ SAVE SCORE
+            string existingJson = File.ReadAllText(Path);
+            data = JsonUtility.FromJson<SaveData>(existingJson);
+        }
+        else
+        {
+            data = new SaveData();
+        }
 
-            lastTowerCost = bm.GetLastCost(),
-            towersBuilt = bm.GetTowerCount(),
-            gameTime = spawner.GetGameTime(),
-            enemyHP = spawner.enemyHP,
-            enemySpeed = spawner.enemySpeed
-        };
+        data.hp = gm.playerHP;
+        data.money = gm.money;
+        data.score = gm.score;
 
-        Tower[] towers = Object.FindObjectsOfType<Tower>();
-        foreach (Tower t in towers)
+        data.lastTowerCost = bm.GetLastCost();
+        data.towersBuilt = bm.GetTowerCount();
+        data.gameTime = spawner.GetGameTime();
+        data.enemyHP = spawner.enemyHP;
+        data.enemySpeed = spawner.enemySpeed;
+
+        data.towers = new List<TowerData>();
+        data.enemies = new List<EnemyData>();
+
+        foreach (Tower t in Object.FindObjectsOfType<Tower>())
         {
             data.towers.Add(new TowerData(t));
         }
 
-        Enemy[] enemies = Object.FindObjectsOfType<Enemy>();
-        foreach (Enemy e in enemies)
+        foreach (Enemy e in Object.FindObjectsOfType<Enemy>())
         {
             data.enemies.Add(new EnemyData(e));
         }
 
         string json = JsonUtility.ToJson(data, true);
         File.WriteAllText(Path, json);
-        Debug.Log("Game Saved");
+
+        Debug.Log("Game Saved WITHOUT deleting leaderboard");
     }
 
     public static SaveData LoadGame()
     {
         if (!File.Exists(Path))
         {
-            Debug.Log("No Save Found");
             return null;
         }
 
         string json = File.ReadAllText(Path);
-        SaveData data = JsonUtility.FromJson<SaveData>(json);
-        Debug.Log("Game Loaded");
-        return data;
+        return JsonUtility.FromJson<SaveData>(json);
     }
 
     public static void DeleteSave()
@@ -77,7 +86,6 @@ public class SaveSystem : MonoBehaviour
         if (File.Exists(Path))
         {
             File.Delete(Path);
-            Debug.Log("Save Deleted");
         }
     }
 

@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System.Collections.Generic;
+using System.IO;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,7 +11,6 @@ public class GameManager : MonoBehaviour
 
     public int playerHP = 10;
     public int money = 100;
-
     public int score = 0;
 
     public int lastTowerCost = 25;
@@ -24,7 +25,9 @@ public class GameManager : MonoBehaviour
 
     public GameObject gameOverUI;
 
-    // ✅ NEW: track game over state
+    public TextMeshProUGUI finalScoreText;
+    public TextMeshProUGUI finalTimeText;
+
     public bool isGameOver = false;
 
     void Awake()
@@ -54,7 +57,6 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        // ❌ STOP time tracking if game over
         if (isGameOver) return;
 
         gameTime += Time.deltaTime;
@@ -94,7 +96,7 @@ public class GameManager : MonoBehaviour
         return false;
     }
 
-    public void UpdateUI()
+    void UpdateUI()
     {
         if (hpText != null) hpText.text = "HP: " + playerHP;
         if (moneyText != null) moneyText.text = "Money: " + money;
@@ -111,11 +113,46 @@ public class GameManager : MonoBehaviour
 
     void GameOver()
     {
-        isGameOver = true; // ✅ LOCK GAME STATE
+        isGameOver = true;
         Time.timeScale = 0f;
 
         if (gameOverUI != null)
             gameOverUI.SetActive(true);
+
+        if (finalScoreText != null)
+            finalScoreText.text = "Final Score: " + score;
+
+        if (finalTimeText != null)
+            finalTimeText.text = "Time Survived: " + FormatTime(gameTime);
+
+        SaveRunToLeaderboard();
+    }
+
+    void SaveRunToLeaderboard()
+    {
+        SaveData data;
+
+        if (SaveSystem.SaveExists())
+        {
+            data = SaveSystem.LoadGame();
+        }
+        else
+        {
+            data = new SaveData();
+        }
+
+        if (data.leaderboard == null)
+            data.leaderboard = new List<RunData>();
+
+        data.leaderboard.Insert(0, new RunData(score, gameTime));
+
+        if (data.leaderboard.Count > 10)
+            data.leaderboard.RemoveAt(data.leaderboard.Count - 1);
+
+        string json = JsonUtility.ToJson(data, true);
+        File.WriteAllText(Application.persistentDataPath + "/save.json", json);
+
+        Debug.Log("Leaderboard Updated. Total Runs: " + data.leaderboard.Count);
     }
 
     public void Restart()
@@ -125,7 +162,6 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    // ✅ NEW: go to main menu
     public void ReturnToMenu()
     {
         Time.timeScale = 1f;
