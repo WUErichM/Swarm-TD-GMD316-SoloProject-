@@ -14,16 +14,15 @@ public class LeaderBoardUI : MonoBehaviour
 
     public void RefreshLeaderboard()
     {
-        SaveData data = SaveSystem.LoadGame();
+        List<RunData> leaderboard = LeaderboardSystem.Load();
 
-        if (data == null || data.leaderboard == null || data.leaderboard.Count == 0)
+        if (leaderboard == null || leaderboard.Count == 0)
         {
             leaderboardText.text = "No runs yet";
             return;
         }
 
-        // Defensive sort (always correct order)
-        List<RunData> sorted = data.leaderboard
+        List<RunData> sorted = leaderboard
             .OrderByDescending(r => r.score)
             .ThenByDescending(r => r.time)
             .Take(5)

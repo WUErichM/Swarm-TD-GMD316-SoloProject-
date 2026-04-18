@@ -129,28 +129,10 @@ public class GameManager : MonoBehaviour
         SaveRunToLeaderboard();
     }
 
+    // ✅ FIXED: now uses dedicated leaderboard system
     void SaveRunToLeaderboard()
     {
-        SaveData data = SaveSystem.LoadGame();
-
-        if (data == null)
-            data = new SaveData();
-
-        if (data.leaderboard == null)
-            data.leaderboard = new List<RunData>();
-
-        data.leaderboard.Add(new RunData(score, gameTime));
-
-        data.leaderboard = data.leaderboard
-            .OrderByDescending(r => r.score)
-            .ThenByDescending(r => r.time)
-            .Take(10)
-            .ToList();
-
-        string json = JsonUtility.ToJson(data, true);
-        File.WriteAllText(Application.persistentDataPath + "/save.json", json);
-
-        Debug.Log("Leaderboard Updated: " + data.leaderboard.Count + " runs saved");
+        LeaderboardSystem.SaveRun(score, gameTime);
     }
 
     public void Restart()
@@ -179,10 +161,13 @@ public class GameManager : MonoBehaviour
 
         UpdateUI();
 
-        BuildManager.instance.LoadData(
-            Mathf.FloorToInt(loadedSaveData.lastTowerCost),
-            loadedSaveData.towersBuilt
-        );
+        if (BuildManager.instance != null)
+        {
+            BuildManager.instance.LoadData(
+                Mathf.FloorToInt(loadedSaveData.lastTowerCost),
+                loadedSaveData.towersBuilt
+            );
+        }
 
         EnemySpawner spawner = FindObjectOfType<EnemySpawner>();
         if (spawner != null)
@@ -192,8 +177,11 @@ public class GameManager : MonoBehaviour
             spawner.enemySpeed = loadedSaveData.enemySpeed;
         }
 
-        foreach (Tower t in FindObjectsOfType<Tower>()) Destroy(t.gameObject);
-        foreach (Enemy e in FindObjectsOfType<Enemy>()) Destroy(e.gameObject);
+        foreach (Tower t in FindObjectsOfType<Tower>())
+            Destroy(t.gameObject);
+
+        foreach (Enemy e in FindObjectsOfType<Enemy>())
+            Destroy(e.gameObject);
 
         foreach (TowerData td in loadedSaveData.towers)
         {
