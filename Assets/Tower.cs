@@ -2,7 +2,7 @@
 
 public class Tower : MonoBehaviour
 {
-    public enum TowerType { Standard, Melee, Sniper }
+    public enum TowerType { Standard, Melee, Sniper, Slow, Empower }
     public TowerType towerType;
 
     public float range = 7.5f;
@@ -16,6 +16,9 @@ public class Tower : MonoBehaviour
 
     private float fireTimer;
 
+    private float slowPercent = 0.35f;
+    private float damageBuffPercent = 0.5f;
+
     void Start()
     {
         ApplyTowerTypeStats();
@@ -23,6 +26,18 @@ public class Tower : MonoBehaviour
 
     void Update()
     {
+        if (towerType == TowerType.Slow)
+        {
+            ApplySlow();
+            return;
+        }
+
+        if (towerType == TowerType.Empower)
+        {
+            ApplyBuff();
+            return;
+        }
+
         fireTimer += Time.deltaTime;
 
         if (fireTimer >= fireRate)
@@ -51,30 +66,67 @@ public class Tower : MonoBehaviour
                 damage += 4;
                 fireRate *= 1.5f;
                 break;
+
+            case TowerType.Slow:
+            case TowerType.Empower:
+                range = 6f;
+                break;
         }
     }
 
-    public void ApplyScaling(int towerIndex)
+    void ApplySlow()
     {
-        damage += towerIndex;
-        fireRate *= Mathf.Max(0.7f, 1f - (towerIndex * 0.03f));
+        Enemy[] enemies = FindObjectsOfType<Enemy>();
+
+        foreach (Enemy e in enemies)
+        {
+            if (Vector3.Distance(transform.position, e.transform.position) <= range)
+            {
+                float slowAmount = Mathf.Clamp(slowPercent, 0f, 0.95f);
+                e.ApplySlow(slowAmount);
+            }
+        }
     }
 
-    // ✅ NEW LEVEL SYSTEM
+    void ApplyBuff()
+    {
+        Tower[] towers = FindObjectsOfType<Tower>();
+
+        foreach (Tower t in towers)
+        {
+            if (t == this) continue;
+            if (t.towerType == TowerType.Slow || t.towerType == TowerType.Empower) continue;
+
+            if (Vector3.Distance(transform.position, t.transform.position) <= range)
+            {
+                t.damage += Mathf.RoundToInt(damageBuffPercent * Time.deltaTime);
+            }
+        }
+    }
+
     public void SetInitialLevel(int newLevel)
     {
         level = newLevel;
 
-        damage += (level - 1);
-        fireRate *= Mathf.Pow(0.92f, level - 1);
+        if (towerType != TowerType.Slow && towerType != TowerType.Empower)
+        {
+            damage += (level - 1);
+            fireRate *= Mathf.Pow(0.92f, level - 1);
+        }
+
+        if (towerType == TowerType.Slow)
+            slowPercent = Mathf.Clamp(0.35f + (level * 0.01f), 0f, 0.95f);
+
+        if (towerType == TowerType.Empower)
+            damageBuffPercent = 0.5f + (level * 0.05f);
+
+        range += (level / 5);
     }
 
     void OnMouseDown()
     {
         if (TowerUI.instance != null)
-        {
             TowerUI.instance.Show(this);
-        }
     }
 
     Enemy FindTarget()
@@ -124,14 +176,34 @@ public class Tower : MonoBehaviour
         p.SetTarget(target, this);
     }
 
-    public void Upgrade()
+    public void UpgradeToMatchHighest()
     {
-        int cost = level * 50;
-        if (!GameManager.instance.SpendMoney(cost)) return;
+        int highestLevel = BuildManager.instance.GetTowerCount();
 
-        level++;
-        damage += 1;
-        fireRate *= 0.9f;
+        if (level >= highestLevel) return;
+
+        int baseCost = BuildManager.instance.GetLastCost();
+        int upgradeCost = Mathf.FloorToInt(baseCost * 0.6f);
+
+        if (!GameManager.instance.SpendMoney(upgradeCost)) return;
+
+        int levelsToGain = highestLevel - level;
+        level = highestLevel;
+
+        if (towerType == TowerType.Slow)
+            slowPercent = Mathf.Clamp(0.35f + (level * 0.01f), 0f, 0.95f);
+        else if (towerType == TowerType.Empower)
+            damageBuffPercent = 0.5f + (level * 0.05f);
+        else
+        {
+            damage += levelsToGain;
+            fireRate *= Mathf.Pow(0.92f, levelsToGain);
+        }
+
+        range += (level / 5);
+
+        if (TowerUI.instance != null)
+            TowerUI.instance.Show(this);
     }
 
     public void LoadFromData(TowerData td)
@@ -140,7 +212,6 @@ public class Tower : MonoBehaviour
         fireRate = td.fireRate;
         range = td.range;
         level = td.level;
-
         towerType = (TowerType)td.towerType;
 
         ApplyTowerTypeStats();

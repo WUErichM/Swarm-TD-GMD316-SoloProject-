@@ -11,6 +11,9 @@ public class TowerUI : MonoBehaviour
     public TextMeshProUGUI rangeText;
     public TextMeshProUGUI fireRateText;
     public TextMeshProUGUI levelText;
+    public TextMeshProUGUI upgradeCostText; // ✅ NEW
+
+    public GameObject upgradeButton; // ✅ NEW
 
     private Tower currentTower;
     private GameObject currentRangeIndicator;
@@ -31,7 +34,6 @@ public class TowerUI : MonoBehaviour
 
         damageText.text = "Damage: " + tower.damage;
 
-        // ✅ Sniper shows unlimited
         if (tower.towerType == Tower.TowerType.Sniper)
         {
             rangeText.text = "Range: Unlimited";
@@ -41,13 +43,30 @@ public class TowerUI : MonoBehaviour
             rangeText.text = "Range: " + tower.range.ToString("F1");
         }
 
-        // ✅ Convert to attacks per second
         float attacksPerSecond = 1f / tower.fireRate;
         fireRateText.text = "Attack Speed: " + attacksPerSecond.ToString("F2") + "/sec";
 
         levelText.text = "Level: " + tower.level;
 
+        UpdateUpgradeUI();
+
         ShowRange(tower);
+    }
+
+    void UpdateUpgradeUI()
+    {
+        int baseCost = BuildManager.instance.GetLastCost();
+        int upgradeCost = Mathf.FloorToInt(baseCost * 0.6f);
+
+        upgradeCostText.text = "Upgrade ($" + upgradeCost + ")";
+    }
+
+    public void OnUpgradeButton()
+    {
+        if (currentTower != null)
+        {
+            currentTower.UpgradeToMatchHighest();
+        }
     }
 
     public void Hide()

@@ -1,13 +1,20 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
     public float speed = 2f;
+    private float baseSpeed;
+
     public int health = 5;
     public int reward = 10;
 
     private Transform[] waypoints;
     private int waypointIndex = 0;
+
+    void Start()
+    {
+        baseSpeed = speed;
+    }
 
     public void Setup(Transform[] path)
     {
@@ -16,6 +23,8 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
+        speed = baseSpeed; // ✅ RESET EACH FRAME
+
         if (waypoints == null || waypoints.Length == 0) return;
 
         Transform target = waypoints[waypointIndex];
@@ -29,10 +38,13 @@ public class Enemy : MonoBehaviour
             waypointIndex++;
 
             if (waypointIndex >= waypoints.Length)
-            {
                 ReachEnd();
-            }
         }
+    }
+
+    public void ApplySlow(float percent)
+    {
+        speed *= (1f - percent);
     }
 
     void ReachEnd()
