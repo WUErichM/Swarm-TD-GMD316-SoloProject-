@@ -11,9 +11,7 @@ public class TowerUI : MonoBehaviour
     public TextMeshProUGUI rangeText;
     public TextMeshProUGUI fireRateText;
     public TextMeshProUGUI levelText;
-    public TextMeshProUGUI upgradeCostText; // ✅ NEW
-
-    public GameObject upgradeButton; // ✅ NEW
+    public TextMeshProUGUI upgradeCostText;
 
     private Tower currentTower;
     private GameObject currentRangeIndicator;
@@ -29,22 +27,27 @@ public class TowerUI : MonoBehaviour
     public void Show(Tower tower)
     {
         currentTower = tower;
-
         panel.SetActive(true);
 
-        damageText.text = "Damage: " + tower.damage;
-
-        if (tower.towerType == Tower.TowerType.Sniper)
+        if (tower.towerType == Tower.TowerType.Slow)
         {
-            rangeText.text = "Range: Unlimited";
+            damageText.text = "Slow: " + (tower.GetSlowPercent() * 100f).ToString("F0") + "%";
+            fireRateText.text = "AoE Effect";
+        }
+        else if (tower.towerType == Tower.TowerType.Empower)
+        {
+            damageText.text = "Buff Tower";
+            fireRateText.text = "Boosts nearby towers";
         }
         else
         {
-            rangeText.text = "Range: " + tower.range.ToString("F1");
+            damageText.text = "Damage: " + tower.damage;
+            fireRateText.text = "Attack Speed: " + (1f / tower.fireRate).ToString("F2") + "/sec";
         }
 
-        float attacksPerSecond = 1f / tower.fireRate;
-        fireRateText.text = "Attack Speed: " + attacksPerSecond.ToString("F2") + "/sec";
+        rangeText.text = tower.towerType == Tower.TowerType.Sniper
+            ? "Range: Unlimited"
+            : "Range: " + tower.range.ToString("F1");
 
         levelText.text = "Level: " + tower.level;
 
@@ -56,7 +59,10 @@ public class TowerUI : MonoBehaviour
     void UpdateUpgradeUI()
     {
         int baseCost = BuildManager.instance.GetLastCost();
-        int upgradeCost = Mathf.FloorToInt(baseCost * 0.6f);
+
+        int upgradeCost = (currentTower.towerType == Tower.TowerType.Slow || currentTower.towerType == Tower.TowerType.Empower)
+            ? Mathf.FloorToInt(baseCost * 0.5f)
+            : Mathf.FloorToInt(baseCost * 0.6f);
 
         upgradeCostText.text = "Upgrade ($" + upgradeCost + ")";
     }
@@ -64,9 +70,7 @@ public class TowerUI : MonoBehaviour
     public void OnUpgradeButton()
     {
         if (currentTower != null)
-        {
             currentTower.UpgradeToMatchHighest();
-        }
     }
 
     public void Hide()
@@ -75,9 +79,7 @@ public class TowerUI : MonoBehaviour
         currentTower = null;
 
         if (currentRangeIndicator != null)
-        {
             Destroy(currentRangeIndicator);
-        }
     }
 
     void ShowRange(Tower tower)
@@ -85,25 +87,19 @@ public class TowerUI : MonoBehaviour
         if (tower.towerType == Tower.TowerType.Sniper) return;
 
         if (currentRangeIndicator != null)
-        {
             Destroy(currentRangeIndicator);
-        }
 
         currentRangeIndicator = Instantiate(rangeIndicatorPrefab);
         currentRangeIndicator.transform.position = tower.transform.position;
 
         RangeIndicator ri = currentRangeIndicator.GetComponent<RangeIndicator>();
         if (ri != null)
-        {
             ri.SetRange(tower.range);
-        }
     }
 
     void Update()
     {
         if (Input.GetMouseButtonDown(1))
-        {
             Hide();
-        }
     }
 }

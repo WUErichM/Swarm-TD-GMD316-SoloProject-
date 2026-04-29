@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using TMPro;
+using UnityEngine.EventSystems;
 
 public class BuildManager : MonoBehaviour
 {
@@ -8,7 +9,6 @@ public class BuildManager : MonoBehaviour
     public GameObject standardTowerPrefab;
     public GameObject meleeTowerPrefab;
     public GameObject sniperTowerPrefab;
-
     public GameObject slowTowerPrefab;
     public GameObject empowerTowerPrefab;
 
@@ -17,7 +17,6 @@ public class BuildManager : MonoBehaviour
     public LayerMask groundMask;
     public LayerMask pathMask;
 
-    // ✅ UI TEXTS
     public TextMeshProUGUI standardCostText;
     public TextMeshProUGUI meleeCostText;
     public TextMeshProUGUI sniperCostText;
@@ -30,9 +29,11 @@ public class BuildManager : MonoBehaviour
     private GameObject previewTower;
     private GameObject rangeIndicator;
 
-    // ✅ SEPARATE COUNTS
     private int offensiveTowersBuilt = 0;
     private int supportTowersBuilt = 0;
+
+    private int offensiveLevelCounter = 0;
+    private int supportLevelCounter = 0;
 
     private int highestTowerLevelEver = 1;
 
@@ -49,14 +50,23 @@ public class BuildManager : MonoBehaviour
 
         HandlePreview();
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
             TryPlace();
 
         if (Input.GetMouseButtonDown(1))
             CancelPreview();
     }
 
-    // ---------- PREVIEW ----------
+    // ---------------- UI BUTTONS ----------------
+
+    public void StartPlacingStandard() { selectedTowerPrefab = standardTowerPrefab; isPlacing = true; }
+    public void StartPlacingMelee() { selectedTowerPrefab = meleeTowerPrefab; isPlacing = true; }
+    public void StartPlacingSniper() { selectedTowerPrefab = sniperTowerPrefab; isPlacing = true; }
+    public void StartPlacingSlow() { selectedTowerPrefab = slowTowerPrefab; isPlacing = true; }
+    public void StartPlacingEmpower() { selectedTowerPrefab = empowerTowerPrefab; isPlacing = true; }
+
+    // ---------------- PREVIEW ----------------
+
     void HandlePreview()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -79,24 +89,16 @@ public class BuildManager : MonoBehaviour
 
             Tower prefabTower = selectedTowerPrefab.GetComponent<Tower>();
 
-            if (prefabTower != null)
+            if (prefabTower != null && prefabTower.towerType != Tower.TowerType.Sniper)
             {
-                if (prefabTower.towerType == Tower.TowerType.Sniper)
-                {
-                    if (rangeIndicator != null)
-                        Destroy(rangeIndicator);
-                }
-                else
-                {
-                    if (rangeIndicator == null)
-                        rangeIndicator = Instantiate(rangeIndicatorPrefab);
+                if (rangeIndicator == null)
+                    rangeIndicator = Instantiate(rangeIndicatorPrefab);
 
-                    rangeIndicator.transform.position = pos;
+                rangeIndicator.transform.position = pos;
 
-                    RangeIndicator ri = rangeIndicator.GetComponent<RangeIndicator>();
-                    if (ri != null)
-                        ri.SetRange(prefabTower.range);
-                }
+                RangeIndicator ri = rangeIndicator.GetComponent<RangeIndicator>();
+                if (ri != null)
+                    ri.SetRange(prefabTower.range);
             }
         }
     }
@@ -106,7 +108,8 @@ public class BuildManager : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, 100f, pathMask)) return;
+        if (Physics.Raycast(ray, out hit, 100f, pathMask))
+            return;
 
         if (Physics.Raycast(ray, out hit, 100f, groundMask))
             PlaceTower(hit.point);
@@ -116,7 +119,8 @@ public class BuildManager : MonoBehaviour
     {
         int cost = GetCurrentCost();
 
-        if (!GameManager.instance.SpendMoney(cost)) return;
+        if (!GameManager.instance.SpendMoney(cost))
+            return;
 
         position.y = 0.5f;
 
@@ -127,81 +131,33 @@ public class BuildManager : MonoBehaviour
 
         if (t != null)
         {
-            int level = GetTotalTowersBuilt() + 1;
-            t.SetInitialLevel(level);
-            RegisterTowerLevel(level);
-
-            // ✅ TRACK TYPE
             if (IsSupportTower(selectedTowerPrefab))
+            {
+                supportLevelCounter++;
+                t.SetInitialLevel(supportLevelCounter, true);
                 supportTowersBuilt++;
+                RegisterTowerLevel(supportLevelCounter);
+            }
             else
+            {
+                offensiveLevelCounter++;
+                t.SetInitialLevel(offensiveLevelCounter, false);
                 offensiveTowersBuilt++;
+                RegisterTowerLevel(offensiveLevelCounter);
+            }
         }
 
         CancelPreview();
     }
 
-    // ---------- COST LOGIC ----------
+    // ---------------- COST ----------------
+
     int GetCurrentCost()
     {
         if (IsSupportTower(selectedTowerPrefab))
         {
-            if (supportTowersBuilt == 0) return 1000;
-
-            float cost = 1000 * Mathf.Pow(1.35f, supportTowersBuilt);
-            return Mathf.FloorToInt(cost);
-        }
-        else
-        {
-            if (offensiveTowersBuilt == 0) return 30;
-            if (offensiveTowersBuilt == 1) return 45;
-            if (offensiveTowersBuilt == 2) return 60;
-            if (offensiveTowersBuilt == 3) return 90;
-            if (offensiveTowersBuilt == 4) return 150;
-
-            float cost = 150 * Mathf.Pow(1.35f, offensiveTowersBuilt - 4);
-            return Mathf.FloorToInt(cost);
-        }
-    }
-
-    bool IsSupportTower(GameObject prefab)
-    {
-        return prefab == slowTowerPrefab || prefab == empowerTowerPrefab;
-    }
-
-    int GetTotalTowersBuilt()
-    {
-        return offensiveTowersBuilt + supportTowersBuilt;
-    }
-
-    // ---------- UI ----------
-    void UpdateCostUI()
-    {
-        int offensiveCost = GetPreviewCost(false);
-        int supportCost = GetPreviewCost(true);
-
-        if (standardCostText != null)
-            standardCostText.text = "Standard ($" + offensiveCost + ")";
-
-        if (meleeCostText != null)
-            meleeCostText.text = "Melee ($" + offensiveCost + ")";
-
-        if (sniperCostText != null)
-            sniperCostText.text = "Sniper ($" + offensiveCost + ")";
-
-        if (slowCostText != null)
-            slowCostText.text = "Slow ($" + supportCost + ")";
-
-        if (empowerCostText != null)
-            empowerCostText.text = "Empower ($" + supportCost + ")";
-    }
-
-    int GetPreviewCost(bool support)
-    {
-        if (support)
-        {
-            if (supportTowersBuilt == 0) return 1000;
-            return Mathf.FloorToInt(1000 * Mathf.Pow(1.35f, supportTowersBuilt));
+            if (supportTowersBuilt == 0) return 500;
+            return Mathf.FloorToInt(500 * Mathf.Pow(1.35f, supportTowersBuilt));
         }
         else
         {
@@ -215,20 +171,55 @@ public class BuildManager : MonoBehaviour
         }
     }
 
-    // ---------- INPUT ----------
-    public void StartPlacingStandard() { selectedTowerPrefab = standardTowerPrefab; isPlacing = true; }
-    public void StartPlacingMelee() { selectedTowerPrefab = meleeTowerPrefab; isPlacing = true; }
-    public void StartPlacingSniper() { selectedTowerPrefab = sniperTowerPrefab; isPlacing = true; }
-    public void StartPlacingSlow() { selectedTowerPrefab = slowTowerPrefab; isPlacing = true; }
-    public void StartPlacingEmpower() { selectedTowerPrefab = empowerTowerPrefab; isPlacing = true; }
+    bool IsSupportTower(GameObject prefab)
+    {
+        return prefab == slowTowerPrefab || prefab == empowerTowerPrefab;
+    }
 
-    // ---------- UTILITY ----------
+    // ---------------- UI ----------------
+
+    void UpdateCostUI()
+    {
+        int offensiveCost = GetPreviewCost(false);
+        int supportCost = GetPreviewCost(true);
+
+        standardCostText.text = "Standard ($" + offensiveCost + ")";
+        meleeCostText.text = "Melee ($" + offensiveCost + ")";
+        sniperCostText.text = "Sniper ($" + offensiveCost + ")";
+        slowCostText.text = "Slow ($" + supportCost + ")";
+        empowerCostText.text = "Empower ($" + supportCost + ")";
+    }
+
+    int GetPreviewCost(bool support)
+    {
+        if (support)
+        {
+            if (supportTowersBuilt == 0) return 500;
+            return Mathf.FloorToInt(500 * Mathf.Pow(1.35f, supportTowersBuilt));
+        }
+        else
+        {
+            if (offensiveTowersBuilt == 0) return 30;
+            if (offensiveTowersBuilt == 1) return 45;
+            if (offensiveTowersBuilt == 2) return 60;
+            if (offensiveTowersBuilt == 3) return 90;
+            if (offensiveTowersBuilt == 4) return 150;
+
+            return Mathf.FloorToInt(150 * Mathf.Pow(1.35f, offensiveTowersBuilt - 4));
+        }
+    }
+
+    // ---------------- UTIL ----------------
+
     void CancelPreview()
     {
         isPlacing = false;
 
-        if (previewTower != null) Destroy(previewTower);
-        if (rangeIndicator != null) Destroy(rangeIndicator);
+        if (previewTower != null)
+            Destroy(previewTower);
+
+        if (rangeIndicator != null)
+            Destroy(rangeIndicator);
     }
 
     void DisableScripts(GameObject obj)
@@ -240,6 +231,7 @@ public class BuildManager : MonoBehaviour
     void SetLayer(GameObject obj, int layer)
     {
         obj.layer = layer;
+
         foreach (Transform child in obj.transform)
             SetLayer(child.gameObject, layer);
     }
@@ -257,11 +249,24 @@ public class BuildManager : MonoBehaviour
         }
     }
 
-    public int GetLastCost() { return GetCurrentCost(); }
+    public int GetLastCost()
+    {
+        return GetCurrentCost();
+    }
 
     public int GetTowerCount()
     {
-        return GetTotalTowersBuilt();
+        return offensiveTowersBuilt + supportTowersBuilt;
+    }
+
+    public int GetHighestSupportLevel()
+    {
+        return Mathf.Max(highestTowerLevelEver, 1);
+    }
+
+    public int GetHighestOffensiveLevel()
+    {
+        return Mathf.Max(highestTowerLevelEver, 1);
     }
 
     public void RegisterTowerLevel(int level)
@@ -277,6 +282,6 @@ public class BuildManager : MonoBehaviour
 
     public void LoadData(int savedLastTowerCost, int savedTowersBuilt)
     {
-        offensiveTowersBuilt = savedTowersBuilt; // simple fallback
+        offensiveTowersBuilt = savedTowersBuilt;
     }
 }

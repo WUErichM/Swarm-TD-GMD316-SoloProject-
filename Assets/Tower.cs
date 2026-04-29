@@ -16,16 +16,29 @@ public class Tower : MonoBehaviour
 
     private float fireTimer;
 
+    private float baseRange;
+    private float baseFireRate;
+    private int baseDamage;
+
     private float slowPercent = 0.35f;
-    private float damageBuffPercent = 0.5f;
+
+    private float damageBuff = 0.5f;
+    private float speedBuff = 0.3f;
+    private float rangeBuff = 2f;
 
     void Start()
     {
         ApplyTowerTypeStats();
+
+        baseRange = range;
+        baseFireRate = fireRate;
+        baseDamage = damage;
     }
 
     void Update()
     {
+        ResetToBaseStats();
+
         if (towerType == TowerType.Slow)
         {
             ApplySlow();
@@ -51,6 +64,13 @@ public class Tower : MonoBehaviour
         }
     }
 
+    void ResetToBaseStats()
+    {
+        range = baseRange;
+        fireRate = baseFireRate;
+        damage = baseDamage;
+    }
+
     void ApplyTowerTypeStats()
     {
         switch (towerType)
@@ -68,60 +88,75 @@ public class Tower : MonoBehaviour
                 break;
 
             case TowerType.Slow:
+                range = 8f;
+                break;
+
             case TowerType.Empower:
-                range = 6f;
+                range = 2f;
                 break;
         }
     }
 
     void ApplySlow()
     {
-        Enemy[] enemies = FindObjectsOfType<Enemy>();
+        Collider[] hits = Physics.OverlapSphere(transform.position, range);
 
-        foreach (Enemy e in enemies)
+        foreach (Collider c in hits)
         {
-            if (Vector3.Distance(transform.position, e.transform.position) <= range)
-            {
-                float slowAmount = Mathf.Clamp(slowPercent, 0f, 0.95f);
-                e.ApplySlow(slowAmount);
-            }
+            Enemy e = c.GetComponent<Enemy>();
+            if (e != null)
+                e.ApplySlow(Mathf.Clamp(slowPercent, 0f, 0.95f));
         }
     }
 
     void ApplyBuff()
     {
-        Tower[] towers = FindObjectsOfType<Tower>();
+        Collider[] hits = Physics.OverlapSphere(transform.position, range);
 
-        foreach (Tower t in towers)
+        foreach (Collider c in hits)
         {
-            if (t == this) continue;
+            Tower t = c.GetComponent<Tower>();
+
+            if (t == null || t == this) continue;
             if (t.towerType == TowerType.Slow || t.towerType == TowerType.Empower) continue;
 
-            if (Vector3.Distance(transform.position, t.transform.position) <= range)
-            {
-                t.damage += Mathf.RoundToInt(damageBuffPercent * Time.deltaTime);
-            }
+            t.damage = Mathf.RoundToInt(t.GetBaseDamage() * (1f + damageBuff));
+            t.fireRate = t.GetBaseFireRate() * (1f - speedBuff);
+            t.range = t.GetBaseRange() + rangeBuff;
         }
     }
 
-    public void SetInitialLevel(int newLevel)
+    public void SetInitialLevel(int newLevel, bool isSupport)
     {
-        level = newLevel;
+        level = Mathf.Max(newLevel, 1);
 
-        if (towerType != TowerType.Slow && towerType != TowerType.Empower)
+        if (!isSupport)
         {
             damage += (level - 1);
             fireRate *= Mathf.Pow(0.92f, level - 1);
         }
+        else
+        {
+            if (towerType == TowerType.Slow)
+                slowPercent = Mathf.Clamp(0.35f + (level * 0.01f), 0f, 0.95f);
 
-        if (towerType == TowerType.Slow)
-            slowPercent = Mathf.Clamp(0.35f + (level * 0.01f), 0f, 0.95f);
+            else if (towerType == TowerType.Empower)
+            {
+                damageBuff = 0.5f + (level * 0.05f);
+                speedBuff = 0.3f + (level * 0.01f);
+            }
 
-        if (towerType == TowerType.Empower)
-            damageBuffPercent = 0.5f + (level * 0.05f);
+            range += (level / 5);
+        }
 
-        range += (level / 5);
+        baseRange = range;
+        baseFireRate = fireRate;
+        baseDamage = damage;
     }
+
+    public int GetBaseDamage() { return baseDamage; }
+    public float GetBaseFireRate() { return baseFireRate; }
+    public float GetBaseRange() { return baseRange; }
 
     void OnMouseDown()
     {
@@ -133,29 +168,28 @@ public class Tower : MonoBehaviour
     {
         Enemy[] enemies = FindObjectsOfType<Enemy>();
 
-        Enemy bestTarget = null;
+        Enemy best = null;
         float bestValue = 0f;
 
         foreach (Enemy e in enemies)
         {
             float dist = Vector3.Distance(transform.position, e.transform.position);
-
             if (dist > range) continue;
 
             if (towerType == TowerType.Melee)
             {
-                if (bestTarget == null || dist < bestValue)
+                if (best == null || dist < bestValue)
                 {
                     bestValue = dist;
-                    bestTarget = e;
+                    best = e;
                 }
             }
             else if (towerType == TowerType.Sniper)
             {
-                if (bestTarget == null || dist > bestValue)
+                if (best == null || dist > bestValue)
                 {
                     bestValue = dist;
-                    bestTarget = e;
+                    best = e;
                 }
             }
             else
@@ -164,7 +198,7 @@ public class Tower : MonoBehaviour
             }
         }
 
-        return bestTarget;
+        return best;
     }
 
     void Shoot(Enemy target)
@@ -176,31 +210,54 @@ public class Tower : MonoBehaviour
         p.SetTarget(target, this);
     }
 
+    public float GetSlowPercent()
+    {
+        return slowPercent;
+    }
+
     public void UpgradeToMatchHighest()
     {
-        int highestLevel = BuildManager.instance.GetTowerCount();
+        bool isSupport = (towerType == TowerType.Slow || towerType == TowerType.Empower);
+
+        int highestLevel = isSupport
+            ? BuildManager.instance.GetHighestSupportLevel()
+            : BuildManager.instance.GetHighestOffensiveLevel();
 
         if (level >= highestLevel) return;
 
-        int baseCost = BuildManager.instance.GetLastCost();
-        int upgradeCost = Mathf.FloorToInt(baseCost * 0.6f);
+        int baseCost = Mathf.Max(BuildManager.instance.GetLastCost(), 1);
+
+        int upgradeCost = isSupport
+            ? Mathf.FloorToInt(baseCost * 0.5f)
+            : Mathf.FloorToInt(baseCost * 0.6f);
 
         if (!GameManager.instance.SpendMoney(upgradeCost)) return;
 
         int levelsToGain = highestLevel - level;
         level = highestLevel;
 
-        if (towerType == TowerType.Slow)
-            slowPercent = Mathf.Clamp(0.35f + (level * 0.01f), 0f, 0.95f);
-        else if (towerType == TowerType.Empower)
-            damageBuffPercent = 0.5f + (level * 0.05f);
-        else
+        if (!isSupport)
         {
             damage += levelsToGain;
             fireRate *= Mathf.Pow(0.92f, levelsToGain);
         }
+        else
+        {
+            if (towerType == TowerType.Slow)
+                slowPercent = Mathf.Clamp(slowPercent + (levelsToGain * 0.01f), 0f, 0.95f);
 
-        range += (level / 5);
+            else if (towerType == TowerType.Empower)
+            {
+                damageBuff += levelsToGain * 0.05f;
+                speedBuff += levelsToGain * 0.01f;
+            }
+
+            range += (levelsToGain / 5);
+        }
+
+        baseRange = range;
+        baseFireRate = fireRate;
+        baseDamage = damage;
 
         if (TowerUI.instance != null)
             TowerUI.instance.Show(this);
@@ -211,9 +268,13 @@ public class Tower : MonoBehaviour
         damage = td.damage;
         fireRate = td.fireRate;
         range = td.range;
-        level = td.level;
+        level = Mathf.Max(td.level, 1);
         towerType = (TowerType)td.towerType;
 
         ApplyTowerTypeStats();
+
+        baseRange = range;
+        baseFireRate = fireRate;
+        baseDamage = damage;
     }
 }

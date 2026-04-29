@@ -4,16 +4,22 @@ public class Enemy : MonoBehaviour
 {
     public float speed = 2f;
     private float baseSpeed;
+    private float currentSpeed;
 
-    public int health = 5;
+    public int health = 4;
     public int reward = 10;
 
     private Transform[] waypoints;
     private int waypointIndex = 0;
 
+    // ✅ Slow tracking
+    private float slowMultiplier = 1f;
+    private float slowTimer = 0f;
+
     void Start()
     {
         baseSpeed = speed;
+        currentSpeed = speed;
     }
 
     public void Setup(Transform[] path)
@@ -23,7 +29,17 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-        speed = baseSpeed; // ✅ RESET EACH FRAME
+        // ✅ Handle slow duration
+        if (slowTimer > 0f)
+        {
+            slowTimer -= Time.deltaTime;
+        }
+        else
+        {
+            slowMultiplier = 1f;
+        }
+
+        currentSpeed = baseSpeed * slowMultiplier;
 
         if (waypoints == null || waypoints.Length == 0) return;
 
@@ -31,7 +47,7 @@ public class Enemy : MonoBehaviour
 
         Vector3 targetPos = new Vector3(target.position.x, transform.position.y, target.position.z);
 
-        transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, targetPos, currentSpeed * Time.deltaTime);
 
         if (Vector3.Distance(transform.position, targetPos) < 0.1f)
         {
@@ -42,9 +58,17 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    // ✅ FIXED: Proper slow application
     public void ApplySlow(float percent)
     {
-        speed *= (1f - percent);
+        float multiplier = Mathf.Clamp(1f - percent, 0.05f, 1f);
+
+        // Take strongest slow only
+        if (multiplier < slowMultiplier)
+            slowMultiplier = multiplier;
+
+        // Refresh duration so it ONLY stays slowed while in range
+        slowTimer = 0.2f;
     }
 
     void ReachEnd()
