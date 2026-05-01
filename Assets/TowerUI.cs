@@ -36,8 +36,8 @@ public class TowerUI : MonoBehaviour
         }
         else if (tower.towerType == Tower.TowerType.Empower)
         {
-            damageText.text = "Buff Tower";
-            fireRateText.text = "Boosts nearby towers";
+            damageText.text = "DMG Buff: +" + (tower.GetDamageBuff() * 100f).ToString("F0") + "%";
+            fireRateText.text = "ATK SPD Buff: +" + (tower.GetSpeedBuff() * 100f).ToString("F0") + "%";
         }
         else
         {

@@ -1539,7 +1539,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHP: 10
-  money: 200000
+  money: 200
   score: 0
   lastTowerCost: 25
   towersBuilt: 0

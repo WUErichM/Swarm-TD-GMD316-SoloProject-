@@ -29,12 +29,10 @@ public class BuildManager : MonoBehaviour
     private GameObject previewTower;
     private GameObject rangeIndicator;
 
-    private int offensiveTowersBuilt = 0;
-    private int supportTowersBuilt = 0;
+    // ✅ Track total towers only
+    private int totalTowersBuilt = 0;
 
-    private int offensiveLevelCounter = 0;
-    private int supportLevelCounter = 0;
-
+    // ✅ Global level system
     private int highestTowerLevelEver = 1;
 
     void Awake()
@@ -98,7 +96,15 @@ public class BuildManager : MonoBehaviour
 
                 RangeIndicator ri = rangeIndicator.GetComponent<RangeIndicator>();
                 if (ri != null)
-                    ri.SetRange(prefabTower.range);
+                {
+                    float displayRange = prefabTower.range;
+
+                    // ✅ Fix: Empower preview range
+                    if (prefabTower.towerType == Tower.TowerType.Empower)
+                        displayRange = 3f;
+
+                    ri.SetRange(displayRange);
+                }
             }
         }
     }
@@ -131,21 +137,18 @@ public class BuildManager : MonoBehaviour
 
         if (t != null)
         {
-            if (IsSupportTower(selectedTowerPrefab))
-            {
-                supportLevelCounter++;
-                t.SetInitialLevel(supportLevelCounter, true);
-                supportTowersBuilt++;
-                RegisterTowerLevel(supportLevelCounter);
-            }
-            else
-            {
-                offensiveLevelCounter++;
-                t.SetInitialLevel(offensiveLevelCounter, false);
-                offensiveTowersBuilt++;
-                RegisterTowerLevel(offensiveLevelCounter);
-            }
+            // ✅ FIX: Correct global leveling (NO +1 bug)
+            int newLevel = Mathf.Max(1, highestTowerLevelEver);
+
+            bool isSupport = IsSupportTower(selectedTowerPrefab);
+
+            t.SetInitialLevel(newLevel, isSupport);
+
+            // After placing, increase global level progression
+            RegisterTowerLevel(newLevel + 1);
         }
+
+        totalTowersBuilt++;
 
         CancelPreview();
     }
@@ -154,21 +157,13 @@ public class BuildManager : MonoBehaviour
 
     int GetCurrentCost()
     {
-        if (IsSupportTower(selectedTowerPrefab))
-        {
-            if (supportTowersBuilt == 0) return 500;
-            return Mathf.FloorToInt(500 * Mathf.Pow(1.35f, supportTowersBuilt));
-        }
-        else
-        {
-            if (offensiveTowersBuilt == 0) return 30;
-            if (offensiveTowersBuilt == 1) return 45;
-            if (offensiveTowersBuilt == 2) return 60;
-            if (offensiveTowersBuilt == 3) return 90;
-            if (offensiveTowersBuilt == 4) return 150;
+        if (totalTowersBuilt == 0) return 30;
+        if (totalTowersBuilt == 1) return 45;
+        if (totalTowersBuilt == 2) return 60;
+        if (totalTowersBuilt == 3) return 90;
+        if (totalTowersBuilt == 4) return 150;
 
-            return Mathf.FloorToInt(150 * Mathf.Pow(1.35f, offensiveTowersBuilt - 4));
-        }
+        return Mathf.FloorToInt(150 * Mathf.Pow(1.35f, totalTowersBuilt - 4));
     }
 
     bool IsSupportTower(GameObject prefab)
@@ -180,33 +175,13 @@ public class BuildManager : MonoBehaviour
 
     void UpdateCostUI()
     {
-        int offensiveCost = GetPreviewCost(false);
-        int supportCost = GetPreviewCost(true);
+        int cost = GetCurrentCost();
 
-        standardCostText.text = "Standard ($" + offensiveCost + ")";
-        meleeCostText.text = "Melee ($" + offensiveCost + ")";
-        sniperCostText.text = "Sniper ($" + offensiveCost + ")";
-        slowCostText.text = "Slow ($" + supportCost + ")";
-        empowerCostText.text = "Empower ($" + supportCost + ")";
-    }
-
-    int GetPreviewCost(bool support)
-    {
-        if (support)
-        {
-            if (supportTowersBuilt == 0) return 500;
-            return Mathf.FloorToInt(500 * Mathf.Pow(1.35f, supportTowersBuilt));
-        }
-        else
-        {
-            if (offensiveTowersBuilt == 0) return 30;
-            if (offensiveTowersBuilt == 1) return 45;
-            if (offensiveTowersBuilt == 2) return 60;
-            if (offensiveTowersBuilt == 3) return 90;
-            if (offensiveTowersBuilt == 4) return 150;
-
-            return Mathf.FloorToInt(150 * Mathf.Pow(1.35f, offensiveTowersBuilt - 4));
-        }
+        standardCostText.text = "Standard ($" + cost + ")";
+        meleeCostText.text = "Melee ($" + cost + ")";
+        sniperCostText.text = "Sniper ($" + cost + ")";
+        slowCostText.text = "Slow ($" + cost + ")";
+        empowerCostText.text = "Empower ($" + cost + ")";
     }
 
     // ---------------- UTIL ----------------
@@ -256,17 +231,7 @@ public class BuildManager : MonoBehaviour
 
     public int GetTowerCount()
     {
-        return offensiveTowersBuilt + supportTowersBuilt;
-    }
-
-    public int GetHighestSupportLevel()
-    {
-        return Mathf.Max(highestTowerLevelEver, 1);
-    }
-
-    public int GetHighestOffensiveLevel()
-    {
-        return Mathf.Max(highestTowerLevelEver, 1);
+        return totalTowersBuilt;
     }
 
     public void RegisterTowerLevel(int level)
@@ -282,6 +247,6 @@ public class BuildManager : MonoBehaviour
 
     public void LoadData(int savedLastTowerCost, int savedTowersBuilt)
     {
-        offensiveTowersBuilt = savedTowersBuilt;
+        totalTowersBuilt = savedTowersBuilt;
     }
 }

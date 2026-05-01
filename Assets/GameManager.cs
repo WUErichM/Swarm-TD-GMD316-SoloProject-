@@ -129,7 +129,6 @@ public class GameManager : MonoBehaviour
         SaveRunToLeaderboard();
     }
 
-    // ✅ FIXED: now uses dedicated leaderboard system
     void SaveRunToLeaderboard()
     {
         LeaderboardSystem.SaveRun(score, gameTime);
@@ -177,12 +176,14 @@ public class GameManager : MonoBehaviour
             spawner.enemySpeed = loadedSaveData.enemySpeed;
         }
 
+        // Clear existing objects
         foreach (Tower t in FindObjectsOfType<Tower>())
             Destroy(t.gameObject);
 
         foreach (Enemy e in FindObjectsOfType<Enemy>())
             Destroy(e.gameObject);
 
+        // Restore towers (FIXED: supports ALL tower types)
         foreach (TowerData td in loadedSaveData.towers)
         {
             Vector3 pos = new Vector3(td.x, td.y, td.z);
@@ -193,12 +194,17 @@ public class GameManager : MonoBehaviour
                 prefabToSpawn = BuildManager.instance.meleeTowerPrefab;
             else if (td.towerType == (int)Tower.TowerType.Sniper)
                 prefabToSpawn = BuildManager.instance.sniperTowerPrefab;
+            else if (td.towerType == (int)Tower.TowerType.Slow)
+                prefabToSpawn = BuildManager.instance.slowTowerPrefab;
+            else if (td.towerType == (int)Tower.TowerType.Empower)
+                prefabToSpawn = BuildManager.instance.empowerTowerPrefab;
 
             GameObject tower = Instantiate(prefabToSpawn, pos, Quaternion.identity);
             Tower towerComp = tower.GetComponent<Tower>();
             towerComp.LoadFromData(td);
         }
 
+        // Restore enemies
         foreach (EnemyData ed in loadedSaveData.enemies)
         {
             GameObject enemyObj = Instantiate(

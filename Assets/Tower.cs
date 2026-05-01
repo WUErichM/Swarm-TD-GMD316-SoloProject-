@@ -20,11 +20,10 @@ public class Tower : MonoBehaviour
     private float baseFireRate;
     private int baseDamage;
 
-    private float slowPercent = 0.35f;
-
-    private float damageBuff = 0.5f;
-    private float speedBuff = 0.3f;
-    private float rangeBuff = 2f;
+    // ✅ BASE VALUES (NERFED + CORRECTED)
+    private float slowPercent = 0.20f;
+    private float damageBuff = 0.20f; // 20% base
+    private float speedBuff = 0.10f;  // 10% base
 
     void Start()
     {
@@ -88,11 +87,11 @@ public class Tower : MonoBehaviour
                 break;
 
             case TowerType.Slow:
-                range = 8f;
+                range = 5f;
                 break;
 
             case TowerType.Empower:
-                range = 2f;
+                range = 3f;
                 break;
         }
     }
@@ -122,7 +121,6 @@ public class Tower : MonoBehaviour
 
             t.damage = Mathf.RoundToInt(t.GetBaseDamage() * (1f + damageBuff));
             t.fireRate = t.GetBaseFireRate() * (1f - speedBuff);
-            t.range = t.GetBaseRange() + rangeBuff;
         }
     }
 
@@ -130,23 +128,29 @@ public class Tower : MonoBehaviour
     {
         level = Mathf.Max(newLevel, 1);
 
+        int levelOffset = level - 1;
+
         if (!isSupport)
         {
-            damage += (level - 1);
-            fireRate *= Mathf.Pow(0.92f, level - 1);
+            damage += levelOffset;
+            fireRate *= Mathf.Pow(0.92f, levelOffset);
         }
         else
         {
             if (towerType == TowerType.Slow)
-                slowPercent = Mathf.Clamp(0.35f + (level * 0.01f), 0f, 0.95f);
-
+            {
+                // ✅ 20% base, +2% per level
+                slowPercent = Mathf.Clamp(0.20f + (levelOffset * 0.02f), 0f, 0.95f);
+            }
             else if (towerType == TowerType.Empower)
             {
-                damageBuff = 0.5f + (level * 0.05f);
-                speedBuff = 0.3f + (level * 0.01f);
-            }
+                // ✅ FINAL BALANCE:
+                // 20% base +1% per level
+                damageBuff = 0.20f + (levelOffset * 0.01f);
 
-            range += (level / 5);
+                // 10% base +1% per level
+                speedBuff = 0.10f + (levelOffset * 0.01f);
+            }
         }
 
         baseRange = range;
@@ -157,6 +161,9 @@ public class Tower : MonoBehaviour
     public int GetBaseDamage() { return baseDamage; }
     public float GetBaseFireRate() { return baseFireRate; }
     public float GetBaseRange() { return baseRange; }
+
+    public float GetDamageBuff() { return damageBuff; }
+    public float GetSpeedBuff() { return speedBuff; }
 
     void OnMouseDown()
     {
@@ -217,47 +224,16 @@ public class Tower : MonoBehaviour
 
     public void UpgradeToMatchHighest()
     {
-        bool isSupport = (towerType == TowerType.Slow || towerType == TowerType.Empower);
-
-        int highestLevel = isSupport
-            ? BuildManager.instance.GetHighestSupportLevel()
-            : BuildManager.instance.GetHighestOffensiveLevel();
+        int highestLevel = BuildManager.instance.GetHighestTowerLevel();
 
         if (level >= highestLevel) return;
 
         int baseCost = Mathf.Max(BuildManager.instance.GetLastCost(), 1);
-
-        int upgradeCost = isSupport
-            ? Mathf.FloorToInt(baseCost * 0.5f)
-            : Mathf.FloorToInt(baseCost * 0.6f);
+        int upgradeCost = Mathf.FloorToInt(baseCost * 0.6f);
 
         if (!GameManager.instance.SpendMoney(upgradeCost)) return;
 
-        int levelsToGain = highestLevel - level;
-        level = highestLevel;
-
-        if (!isSupport)
-        {
-            damage += levelsToGain;
-            fireRate *= Mathf.Pow(0.92f, levelsToGain);
-        }
-        else
-        {
-            if (towerType == TowerType.Slow)
-                slowPercent = Mathf.Clamp(slowPercent + (levelsToGain * 0.01f), 0f, 0.95f);
-
-            else if (towerType == TowerType.Empower)
-            {
-                damageBuff += levelsToGain * 0.05f;
-                speedBuff += levelsToGain * 0.01f;
-            }
-
-            range += (levelsToGain / 5);
-        }
-
-        baseRange = range;
-        baseFireRate = fireRate;
-        baseDamage = damage;
+        SetInitialLevel(highestLevel, towerType == TowerType.Slow || towerType == TowerType.Empower);
 
         if (TowerUI.instance != null)
             TowerUI.instance.Show(this);
@@ -272,6 +248,7 @@ public class Tower : MonoBehaviour
         towerType = (TowerType)td.towerType;
 
         ApplyTowerTypeStats();
+        SetInitialLevel(level, towerType == TowerType.Slow || towerType == TowerType.Empower);
 
         baseRange = range;
         baseFireRate = fireRate;
