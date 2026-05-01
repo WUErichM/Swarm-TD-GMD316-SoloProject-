@@ -12,7 +12,6 @@ public class Enemy : MonoBehaviour
     private Transform[] waypoints;
     private int waypointIndex = 0;
 
-    // ✅ Slow tracking
     private float slowMultiplier = 1f;
     private float slowTimer = 0f;
 
@@ -29,22 +28,16 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-        // ✅ Handle slow duration
         if (slowTimer > 0f)
-        {
             slowTimer -= Time.deltaTime;
-        }
         else
-        {
             slowMultiplier = 1f;
-        }
 
         currentSpeed = baseSpeed * slowMultiplier;
 
         if (waypoints == null || waypoints.Length == 0) return;
 
         Transform target = waypoints[waypointIndex];
-
         Vector3 targetPos = new Vector3(target.position.x, transform.position.y, target.position.z);
 
         transform.position = Vector3.MoveTowards(transform.position, targetPos, currentSpeed * Time.deltaTime);
@@ -58,22 +51,30 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    // ✅ FIXED: Proper slow application
     public void ApplySlow(float percent)
     {
         float multiplier = Mathf.Clamp(1f - percent, 0.05f, 1f);
 
-        // Take strongest slow only
         if (multiplier < slowMultiplier)
             slowMultiplier = multiplier;
 
-        // Refresh duration so it ONLY stays slowed while in range
         slowTimer = 0.2f;
     }
 
     void ReachEnd()
     {
         GameManager.instance.LoseLife(1);
+
+        // Kill all enemies
+        Enemy[] enemies = FindObjectsOfType<Enemy>();
+        foreach (Enemy e in enemies)
+            Destroy(e.gameObject);
+
+        // STRONGER nerf
+        EnemySpawner spawner = FindObjectOfType<EnemySpawner>();
+        if (spawner != null)
+            spawner.ApplyGlobalNerf(0.8f, 0.85f); // -20% HP, -15% Speed
+
         Destroy(gameObject);
     }
 

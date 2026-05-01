@@ -60,9 +60,12 @@ public class TowerUI : MonoBehaviour
     {
         int baseCost = BuildManager.instance.GetLastCost();
 
-        int upgradeCost = (currentTower.towerType == Tower.TowerType.Slow || currentTower.towerType == Tower.TowerType.Empower)
-            ? Mathf.FloorToInt(baseCost * 0.5f)
-            : Mathf.FloorToInt(baseCost * 0.6f);
+        float costMultiplier = (currentTower.towerType == Tower.TowerType.Slow || currentTower.towerType == Tower.TowerType.Empower)
+            ? 0.5f
+            : 0.6f;
+
+        // ✅ SAME 20% DISCOUNT APPLIED HERE
+        int upgradeCost = Mathf.FloorToInt(baseCost * costMultiplier * 0.8f);
 
         upgradeCostText.text = "Upgrade ($" + upgradeCost + ")";
     }

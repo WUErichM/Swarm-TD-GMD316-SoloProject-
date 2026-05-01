@@ -20,10 +20,9 @@ public class Tower : MonoBehaviour
     private float baseFireRate;
     private int baseDamage;
 
-    // ✅ BASE VALUES (NERFED + CORRECTED)
     private float slowPercent = 0.20f;
-    private float damageBuff = 0.20f; // 20% base
-    private float speedBuff = 0.10f;  // 10% base
+    private float damageBuff = 0.20f;
+    private float speedBuff = 0.10f;
 
     void Start()
     {
@@ -139,16 +138,11 @@ public class Tower : MonoBehaviour
         {
             if (towerType == TowerType.Slow)
             {
-                // ✅ 20% base, +2% per level
                 slowPercent = Mathf.Clamp(0.20f + (levelOffset * 0.02f), 0f, 0.95f);
             }
             else if (towerType == TowerType.Empower)
             {
-                // ✅ FINAL BALANCE:
-                // 20% base +1% per level
                 damageBuff = 0.20f + (levelOffset * 0.01f);
-
-                // 10% base +1% per level
                 speedBuff = 0.10f + (levelOffset * 0.01f);
             }
         }
@@ -229,7 +223,12 @@ public class Tower : MonoBehaviour
         if (level >= highestLevel) return;
 
         int baseCost = Mathf.Max(BuildManager.instance.GetLastCost(), 1);
-        int upgradeCost = Mathf.FloorToInt(baseCost * 0.6f);
+
+        // ORIGINAL COST LOGIC
+        float costMultiplier = (towerType == TowerType.Slow || towerType == TowerType.Empower) ? 0.5f : 0.6f;
+
+        // ✅ APPLY GLOBAL 20% DISCOUNT
+        int upgradeCost = Mathf.FloorToInt(baseCost * costMultiplier * 0.8f);
 
         if (!GameManager.instance.SpendMoney(upgradeCost)) return;
 
