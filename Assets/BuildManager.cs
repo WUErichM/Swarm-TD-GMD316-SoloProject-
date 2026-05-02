@@ -29,11 +29,8 @@ public class BuildManager : MonoBehaviour
     private GameObject previewTower;
     private GameObject rangeIndicator;
 
-    // ✅ Track total towers only
+    // ✅ ONLY thing that matters now
     private int totalTowersBuilt = 0;
-
-    // ✅ Global level system
-    private int highestTowerLevelEver = 1;
 
     void Awake()
     {
@@ -99,7 +96,6 @@ public class BuildManager : MonoBehaviour
                 {
                     float displayRange = prefabTower.range;
 
-                    // ✅ Fix: Empower preview range
                     if (prefabTower.towerType == Tower.TowerType.Empower)
                         displayRange = 3f;
 
@@ -137,15 +133,15 @@ public class BuildManager : MonoBehaviour
 
         if (t != null)
         {
-            // ✅ FIX: Correct global leveling (NO +1 bug)
-            int newLevel = Mathf.Max(1, highestTowerLevelEver);
+            // ✅ Level = number of towers AFTER placement
+            int newLevel = totalTowersBuilt + 1;
 
             bool isSupport = IsSupportTower(selectedTowerPrefab);
 
-            t.SetInitialLevel(newLevel, isSupport);
+            int maxLevel = totalTowersBuilt + 1;
+            newLevel = Mathf.Clamp(newLevel, 1, maxLevel);
 
-            // After placing, increase global level progression
-            RegisterTowerLevel(newLevel + 1);
+            t.SetInitialLevel(newLevel, isSupport);
         }
 
         totalTowersBuilt++;
@@ -232,17 +228,6 @@ public class BuildManager : MonoBehaviour
     public int GetTowerCount()
     {
         return totalTowersBuilt;
-    }
-
-    public void RegisterTowerLevel(int level)
-    {
-        if (level > highestTowerLevelEver)
-            highestTowerLevelEver = level;
-    }
-
-    public int GetHighestTowerLevel()
-    {
-        return highestTowerLevelEver;
     }
 
     public void LoadData(int savedLastTowerCost, int savedTowersBuilt)

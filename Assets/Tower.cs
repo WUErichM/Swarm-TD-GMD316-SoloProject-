@@ -125,7 +125,9 @@ public class Tower : MonoBehaviour
 
     public void SetInitialLevel(int newLevel, bool isSupport)
     {
-        level = Mathf.Max(newLevel, 1);
+        int maxLevel = BuildManager.instance != null ? BuildManager.instance.GetTowerCount() + 1 : newLevel;
+
+        level = Mathf.Clamp(newLevel, 1, maxLevel);
 
         int levelOffset = level - 1;
 
@@ -218,21 +220,21 @@ public class Tower : MonoBehaviour
 
     public void UpgradeToMatchHighest()
     {
-        int highestLevel = BuildManager.instance.GetHighestTowerLevel();
+        int maxLevel = BuildManager.instance.GetTowerCount();
 
-        if (level >= highestLevel) return;
+        if (level >= maxLevel) return;
 
         int baseCost = Mathf.Max(BuildManager.instance.GetLastCost(), 1);
 
-        // ORIGINAL COST LOGIC
         float costMultiplier = (towerType == TowerType.Slow || towerType == TowerType.Empower) ? 0.5f : 0.6f;
 
-        // ✅ APPLY GLOBAL 20% DISCOUNT
         int upgradeCost = Mathf.FloorToInt(baseCost * costMultiplier * 0.8f);
 
         if (!GameManager.instance.SpendMoney(upgradeCost)) return;
 
-        SetInitialLevel(highestLevel, towerType == TowerType.Slow || towerType == TowerType.Empower);
+        int targetLevel = Mathf.Clamp(maxLevel, 1, maxLevel);
+
+        SetInitialLevel(targetLevel, towerType == TowerType.Slow || towerType == TowerType.Empower);
 
         if (TowerUI.instance != null)
             TowerUI.instance.Show(this);
@@ -243,7 +245,11 @@ public class Tower : MonoBehaviour
         damage = td.damage;
         fireRate = td.fireRate;
         range = td.range;
-        level = Mathf.Max(td.level, 1);
+
+        int maxLevel = BuildManager.instance != null ? BuildManager.instance.GetTowerCount() : td.level;
+
+        level = Mathf.Clamp(td.level, 1, maxLevel);
+
         towerType = (TowerType)td.towerType;
 
         ApplyTowerTypeStats();
